@@ -36,14 +36,15 @@ namespace Portal.BLL
             }
         }
 
-        public static void Update(Imovel _imovel)
+        public static void Update(Corretor _corretor)
         {
             using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
             {
-                var imovel = DBContext19.Imovels.Single(p => p.Id == _imovel.Id);
-                imovel.Descricao = _imovel.Descricao;
-                imovel.Valor = _imovel.Valor;
-                imovel.Localizacao = _imovel.Localizacao;
+                var corretor = DBContext19.Corretors.Single(p => p.Id == _corretor.Id);
+                corretor.Nome = _corretor.Nome;
+                corretor.Email = _corretor.Email;
+                corretor.Telefone = _corretor.Telefone;
+                corretor.Deputado = _corretor.Deputado;
                 DBContext19.SaveChanges();
 
             }
