@@ -32,18 +32,19 @@ namespace Portal.BLL
         }
 
         
-    public static void Update(Imovel _imovel)
-    {
-        using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+        public static void Update(Imovel _imovel)
         {
-            var imovel = DBContext19.Imovels.Single(p => p.Id == _imovel.Id);
-            imovel.Descricao = _imovel.Descricao;
-            imovel.Valor = _imovel.Valor;
-            imovel.Localizacao = _imovel.Localizacao;
-            DBContext19.SaveChanges();
+            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            {
+                var imovel = DBContext19.Imovels.Single(p => p.Id == _imovel.Id);
+                imovel.Descricao = _imovel.Descricao;
+                imovel.Valor = _imovel.Valor;
+                imovel.Localizacao = _imovel.Localizacao;
+                DBContext19.SaveChanges();
 
+            }
         }
-        }           
+        
         public static void Excluir(Imovel _imovel)
         {
             using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
