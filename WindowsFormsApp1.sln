@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.APP", "Portal.APP\Portal.APP.csproj", "{FE7ED339-1A19-449B-8A02-56AA35A49DCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal.APP", "Portal.APP\Portal.APP.csproj", "{FE7ED339-1A19-449B-8A02-56AA35A49DCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.BLL", "Portal.BLL\Portal.BLL.csproj", "{32D83E79-108F-4FE4-A5E1-42995D52C9CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal.BLL", "Portal.BLL\Portal.BLL.csproj", "{32D83E79-108F-4FE4-A5E1-42995D52C9CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.DAL", "Portal.DAL\Portal.DAL.csproj", "{BF643363-0236-47F4-B96E-83679BE8A900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal.DAL", "Portal.DAL\Portal.DAL.csproj", "{BF643363-0236-47F4-B96E-83679BE8A900}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.MODEL", "Portal.MODEL\Portal.MODEL.csproj", "{C0FA0146-CB90-408F-8F38-236424B7446D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal.MODEL", "Portal.MODEL\Portal.MODEL.csproj", "{C0FA0146-CB90-408F-8F38-236424B7446D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.BLLService", "Portal.BLLService\Portal.BLLService.csproj", "{88125981-AF1E-489B-BC03-BB5703B33BDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C0FA0146-CB90-408F-8F38-236424B7446D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0FA0146-CB90-408F-8F38-236424B7446D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0FA0146-CB90-408F-8F38-236424B7446D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88125981-AF1E-489B-BC03-BB5703B33BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88125981-AF1E-489B-BC03-BB5703B33BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88125981-AF1E-489B-BC03-BB5703B33BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88125981-AF1E-489B-BC03-BB5703B33BDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
