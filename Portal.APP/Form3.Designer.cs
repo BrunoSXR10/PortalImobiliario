@@ -77,6 +77,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Lista de imoveis";
             FormClosed += Form3_FormClosed;
+            Load += Form3_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

@@ -89,6 +89,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Portal Imobiliario";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 

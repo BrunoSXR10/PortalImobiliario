@@ -14,7 +14,7 @@ namespace Portal.APP
 {
     public partial class Form3 : Form
     {
-        Form1 form1 = new Form1();
+        
 
         public Form3()
         {
@@ -23,6 +23,7 @@ namespace Portal.APP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
         }
@@ -36,6 +37,11 @@ namespace Portal.APP
         {
             List<Imovel> imovel = ImovelRepository.GetAll();
             dataGridView1.DataSource = imovel;
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

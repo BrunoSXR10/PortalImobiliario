@@ -12,9 +12,6 @@ namespace Portal.APP
 {
     public partial class Form4 : Form
     {
-        Form1 form1 = new Form1();
-        Form5 form5 = new Form5();
-
         public Form4()
         {
             InitializeComponent();
@@ -27,6 +24,7 @@ namespace Portal.APP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
         }
@@ -44,6 +42,7 @@ namespace Portal.APP
         private void button2_Click(object sender, EventArgs e)
         {
             //logou
+            Form5 form5 = new Form5();
             form5.Show();
             this.Hide();
         }
