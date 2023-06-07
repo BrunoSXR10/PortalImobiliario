@@ -25,5 +25,24 @@ namespace Portal.BLLService.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpGet("{Id}", Name = "GetImovelByID")]
+
+        public ActionResult<List<Imovel>> GetImovelByID(int Id)
+        {
+            try
+            {
+                Imovel _imovel = ImovelRepository.GetByID(Id);
+                if (_imovel != null) 
+                {
+                    return Ok(_imovel); 
+                }
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }
