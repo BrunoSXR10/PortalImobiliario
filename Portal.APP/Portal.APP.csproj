@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Portal.BLLService\Portal.BLLService.csproj" />
     <ProjectReference Include="..\Portal.BLL\Portal.BLL.csproj" />
     <ProjectReference Include="..\Portal.MODEL\Portal.MODEL.csproj" />
   </ItemGroup>
