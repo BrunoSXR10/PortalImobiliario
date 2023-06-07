@@ -28,7 +28,7 @@ namespace Portal.BLLService.Controllers
 
         [HttpGet("{Id}", Name = "GetImovelByID")]
 
-        public ActionResult<List<Imovel>> GetImovelByID(int Id)
+        public ActionResult<Imovel> GetImovelByID(int Id)
         {
             try
             {
@@ -38,6 +38,23 @@ namespace Portal.BLLService.Controllers
                     return Ok(_imovel); 
                 }
                 return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost(Name = "AddImovel")]
+
+        public IActionResult AddImovel([FromBody] Imovel imovel) //ActionResult<Imovel>
+        {
+            try
+            {
+                ImovelRepository.Add(imovel);
+                return CreatedAtAction(nameof(GetImovelByID),
+                    new {id = imovel.Id},
+                    imovel);          
             }
             catch (Exception ex)
             {
