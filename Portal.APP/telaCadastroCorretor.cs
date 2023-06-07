@@ -12,17 +12,12 @@ using System.Windows.Forms;
 
 namespace Portal.APP
 {
-    public partial class Form2 : Form
+    public partial class telaCadastroCorretor : Form
     {
-        
-        public Form2()
+
+        public telaCadastroCorretor()
         {
             InitializeComponent();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
@@ -30,19 +25,14 @@ namespace Portal.APP
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void voltarButton_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            telaInicial form1 = new telaInicial();
             form1.Show();
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void cadastrarButton_Click(object sender, EventArgs e)
         {
             Corretor c = new Corretor();
             c.Nome = nomeTextBox.Text;
@@ -52,5 +42,6 @@ namespace Portal.APP
             MessageBox.Show("Corretor Cadastrado com Sucesso!");
 
         }
+
     }
 }

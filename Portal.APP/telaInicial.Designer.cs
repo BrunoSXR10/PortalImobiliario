@@ -1,6 +1,6 @@
 ﻿namespace Portal.APP
 {
-    partial class Form1
+    partial class telaInicial
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaInicial));
             titulo = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            cadastrarButton = new Button();
+            listarImoveisButton = new Button();
+            loginButton = new Button();
             SuspendLayout();
             // 
             // titulo
@@ -44,44 +44,44 @@
             titulo.TabIndex = 0;
             titulo.Text = "Portal Imobiliario";
             // 
-            // button1
+            // cadastrarButton
             // 
-            button1.Location = new Point(12, 85);
-            button1.Name = "button1";
-            button1.Size = new Size(280, 108);
-            button1.TabIndex = 1;
-            button1.Text = "cadastre-se";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            cadastrarButton.Location = new Point(51, 85);
+            cadastrarButton.Name = "cadastrarButton";
+            cadastrarButton.Size = new Size(280, 108);
+            cadastrarButton.TabIndex = 1;
+            cadastrarButton.Text = "cadastre-se";
+            cadastrarButton.UseVisualStyleBackColor = true;
+            cadastrarButton.Click += cadastrarButton_Click;
             // 
-            // button2
+            // listarImoveisButton
             // 
-            button2.Location = new Point(326, 81);
-            button2.Name = "button2";
-            button2.Size = new Size(280, 116);
-            button2.TabIndex = 2;
-            button2.Text = "listar imoveis disponiveis";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            listarImoveisButton.Location = new Point(409, 81);
+            listarImoveisButton.Name = "listarImoveisButton";
+            listarImoveisButton.Size = new Size(280, 116);
+            listarImoveisButton.TabIndex = 2;
+            listarImoveisButton.Text = "listar imoveis disponiveis";
+            listarImoveisButton.UseVisualStyleBackColor = true;
+            listarImoveisButton.Click += listarImoveisButton_Click;
             // 
-            // button3
+            // loginButton
             // 
-            button3.Location = new Point(186, 247);
-            button3.Name = "button3";
-            button3.Size = new Size(319, 131);
-            button3.TabIndex = 3;
-            button3.Text = "login";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            loginButton.Location = new Point(186, 247);
+            loginButton.Name = "loginButton";
+            loginButton.Size = new Size(319, 131);
+            loginButton.TabIndex = 3;
+            loginButton.Text = "login";
+            loginButton.UseVisualStyleBackColor = true;
+            loginButton.Click += loginButton_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(loginButton);
+            Controls.Add(listarImoveisButton);
+            Controls.Add(cadastrarButton);
             Controls.Add(titulo);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -89,15 +89,14 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Portal Imobiliario";
-            Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label titulo;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button cadastrarButton;
+        private Button listarImoveisButton;
+        private Button loginButton;
     }
 }

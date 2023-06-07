@@ -1,6 +1,6 @@
 ﻿namespace Portal.APP
 {
-    partial class Form6
+    partial class telaCadastroImoveis
     {
         /// <summary>
         /// Required designer variable.
@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            voltarButton = new Button();
+            descricaoLabel = new Label();
+            localizacaoLabel = new Label();
+            valorLabel = new Label();
             descricaoTextBox = new TextBox();
             localizacaoTextBox = new TextBox();
             valorTextBox = new TextBox();
-            button2 = new Button();
+            cadastrarButton = new Button();
             SuspendLayout();
             // 
-            // button1
+            // voltarButton
             // 
-            button1.Location = new Point(554, 331);
-            button1.Name = "button1";
-            button1.Size = new Size(187, 74);
-            button1.TabIndex = 0;
-            button1.Text = "voltar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            voltarButton.Location = new Point(554, 331);
+            voltarButton.Name = "voltarButton";
+            voltarButton.Size = new Size(187, 74);
+            voltarButton.TabIndex = 0;
+            voltarButton.Text = "voltar";
+            voltarButton.UseVisualStyleBackColor = true;
+            voltarButton.Click += voltarButton_Click;
             // 
-            // label1
+            // descricaoLabel
             // 
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(80, 69);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 27);
-            label1.TabIndex = 1;
-            label1.Text = "descricao";
+            descricaoLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            descricaoLabel.Location = new Point(80, 69);
+            descricaoLabel.Name = "descricaoLabel";
+            descricaoLabel.Size = new Size(111, 27);
+            descricaoLabel.TabIndex = 1;
+            descricaoLabel.Text = "descricao";
             // 
-            // label2
+            // localizacaoLabel
             // 
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(80, 158);
-            label2.Name = "label2";
-            label2.Size = new Size(111, 27);
-            label2.TabIndex = 2;
-            label2.Text = "localizacao";
+            localizacaoLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            localizacaoLabel.Location = new Point(80, 158);
+            localizacaoLabel.Name = "localizacaoLabel";
+            localizacaoLabel.Size = new Size(111, 27);
+            localizacaoLabel.TabIndex = 2;
+            localizacaoLabel.Text = "localizacao";
             // 
-            // label3
+            // valorLabel
             // 
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(94, 224);
-            label3.Name = "label3";
-            label3.Size = new Size(111, 27);
-            label3.TabIndex = 3;
-            label3.Text = "valor";
+            valorLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            valorLabel.Location = new Point(94, 224);
+            valorLabel.Name = "valorLabel";
+            valorLabel.Size = new Size(111, 27);
+            valorLabel.TabIndex = 3;
+            valorLabel.Text = "valor";
             // 
             // descricaoTextBox
             // 
@@ -97,49 +97,48 @@
             valorTextBox.Size = new Size(282, 23);
             valorTextBox.TabIndex = 6;
             // 
-            // button2
+            // cadastrarButton
             // 
-            button2.Location = new Point(161, 327);
-            button2.Name = "button2";
-            button2.Size = new Size(260, 82);
-            button2.TabIndex = 7;
-            button2.Text = "cadastrar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            cadastrarButton.Location = new Point(161, 327);
+            cadastrarButton.Name = "cadastrarButton";
+            cadastrarButton.Size = new Size(260, 82);
+            cadastrarButton.TabIndex = 7;
+            cadastrarButton.Text = "cadastrar";
+            cadastrarButton.UseVisualStyleBackColor = true;
+            cadastrarButton.Click += cadastrarButton_Click;
             // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            Controls.Add(cadastrarButton);
             Controls.Add(valorTextBox);
             Controls.Add(localizacaoTextBox);
             Controls.Add(descricaoTextBox);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button1);
+            Controls.Add(valorLabel);
+            Controls.Add(localizacaoLabel);
+            Controls.Add(descricaoLabel);
+            Controls.Add(voltarButton);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "Form6";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de imoveis";
             FormClosed += Form6_FormClosed;
-            Load += Form6_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private Button voltarButton;
+        private Label descricaoLabel;
+        private Label localizacaoLabel;
+        private Label valorLabel;
         private TextBox descricaoTextBox;
         private TextBox localizacaoTextBox;
         private TextBox valorTextBox;
-        private Button button2;
+        private Button cadastrarButton;
     }
 }

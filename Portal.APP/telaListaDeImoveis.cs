@@ -12,36 +12,29 @@ using Portal.MODEL;
 
 namespace Portal.APP
 {
-    public partial class Form3 : Form
+    public partial class telaListaDeImoveis : Form
     {
-        
-
-        public Form3()
+        public telaListaDeImoveis()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void voltarButton_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            telaInicial form1 = new telaInicial();
             form1.Show();
             this.Hide();
+        }
+        private void listarImoveisButton_Click(object sender, EventArgs e)
+        {
+            List<Imovel> imovel = ImovelRepository.GetAll();
+            dataGridView1.DataSource = imovel;
         }
 
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            List<Imovel> imovel = ImovelRepository.GetAll();
-            dataGridView1.DataSource = imovel;
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

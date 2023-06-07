@@ -12,10 +12,10 @@ using Portal.MODEL;
 
 namespace Portal.APP
 {
-    public partial class Form6 : Form
+    public partial class telaCadastroImoveis : Form
     {
-        Form5 form5 = new Form5();
-        public Form6()
+        telaGerenciamento form5 = new telaGerenciamento();
+        public telaCadastroImoveis()
         {
             InitializeComponent();
         }
@@ -25,13 +25,13 @@ namespace Portal.APP
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void voltarButton_Click(object sender, EventArgs e)
         {
             form5.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void cadastrarButton_Click(object sender, EventArgs e)
         {
             //falta ligacao com o corretor
             Imovel i = new Imovel();
@@ -42,9 +42,5 @@ namespace Portal.APP
             MessageBox.Show("Imovel Cadastrado com Sucesso!");
         }
 
-        private void Form6_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

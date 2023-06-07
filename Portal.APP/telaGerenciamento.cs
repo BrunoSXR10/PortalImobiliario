@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Portal.APP
 {
-    public partial class Form5 : Form
+    public partial class telaGerenciamento : Form
     {
-        
-        public Form5()
+
+        public telaGerenciamento()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cadastrarImovelButton_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
+            telaCadastroImoveis form6 = new telaCadastroImoveis();
             form6.Show();
             this.Hide();
         }
@@ -28,11 +28,6 @@ namespace Portal.APP
         private void Form5_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Form5_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
