@@ -61,18 +61,18 @@ namespace Portal.APP
                     if (response.IsSuccessStatusCode)
                     {
                         // Cadastro realizado com sucesso
-                        MessageBox.Show("Objeto cadastrado com sucesso!");
+                        MessageBox.Show("Imovel cadastrado com sucesso!");
                     }
                     else
                     {
                         // Lidar com erros da API
-                        MessageBox.Show("Erro ao cadastrar objeto. Resposta da API: " + response.StatusCode);
+                        MessageBox.Show("Erro ao cadastrar Imovel. Resposta da API: " + response.StatusCode);
                     }
                 }
                 catch (Exception ex)
                 {
                     // Lidar com erros de conexão ou outros erros
-                    MessageBox.Show("Erro ao cadastrar objeto: " + ex.Message);
+                    MessageBox.Show("Erro ao cadastrar Imovel: " + ex.Message);
                 }
             }
 

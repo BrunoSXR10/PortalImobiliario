@@ -31,18 +31,20 @@
             voltarButton = new Button();
             cadastrarButton = new Button();
             nomeLabel = new Label();
-            nomeTextBox = new TextBox();
             emailLabel = new Label();
-            emailTextBox = new TextBox();
             telefoneLabel = new Label();
-            telTextBox = new TextBox();
-            nacionalidadeLabel = new Label();
-            naciTextBox = new TextBox();
+            naciLabel = new Label();
+            senhaLabel = new Label();
+            nomeTextBox = new TextBox();
+            emailTextBox = new TextBox();
+            telefoneTextBox = new TextBox();
+            nacionalidadeTextBox = new TextBox();
+            senhaTextBox = new TextBox();
             SuspendLayout();
             // 
             // voltarButton
             // 
-            voltarButton.Location = new Point(630, 332);
+            voltarButton.Location = new Point(564, 328);
             voltarButton.Name = "voltarButton";
             voltarButton.Size = new Size(125, 70);
             voltarButton.TabIndex = 0;
@@ -52,7 +54,7 @@
             // 
             // cadastrarButton
             // 
-            cadastrarButton.Location = new Point(273, 332);
+            cadastrarButton.Location = new Point(126, 332);
             cadastrarButton.Name = "cadastrarButton";
             cadastrarButton.Size = new Size(180, 62);
             cadastrarButton.TabIndex = 1;
@@ -62,90 +64,113 @@
             // 
             // nomeLabel
             // 
-            nomeLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            nomeLabel.Location = new Point(47, 78);
+            nomeLabel.AutoSize = true;
+            nomeLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            nomeLabel.Location = new Point(88, 92);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new Size(95, 42);
-            nomeLabel.TabIndex = 2;
-            nomeLabel.Text = "nome";
-            // 
-            // nomeTextBox
-            // 
-            nomeTextBox.Location = new Point(190, 89);
-            nomeTextBox.Name = "nomeTextBox";
-            nomeTextBox.Size = new Size(161, 23);
-            nomeTextBox.TabIndex = 3;
+            nomeLabel.Size = new Size(63, 25);
+            nomeLabel.TabIndex = 11;
+            nomeLabel.Text = "Nome";
             // 
             // emailLabel
             // 
-            emailLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            emailLabel.Location = new Point(47, 131);
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            emailLabel.Location = new Point(93, 142);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(95, 42);
-            emailLabel.TabIndex = 4;
-            emailLabel.Text = "email";
-            // 
-            // emailTextBox
-            // 
-            emailTextBox.Location = new Point(190, 131);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(161, 23);
-            emailTextBox.TabIndex = 5;
+            emailLabel.Size = new Size(58, 25);
+            emailLabel.TabIndex = 12;
+            emailLabel.Text = "Email";
             // 
             // telefoneLabel
             // 
-            telefoneLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            telefoneLabel.Location = new Point(47, 173);
+            telefoneLabel.AutoSize = true;
+            telefoneLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            telefoneLabel.Location = new Point(79, 195);
             telefoneLabel.Name = "telefoneLabel";
-            telefoneLabel.Size = new Size(107, 42);
-            telefoneLabel.TabIndex = 6;
-            telefoneLabel.Text = "telefone";
+            telefoneLabel.Size = new Size(83, 25);
+            telefoneLabel.TabIndex = 13;
+            telefoneLabel.Text = "Telefone";
             // 
-            // telTextBox
+            // naciLabel
             // 
-            telTextBox.Location = new Point(190, 184);
-            telTextBox.Name = "telTextBox";
-            telTextBox.Size = new Size(161, 23);
-            telTextBox.TabIndex = 7;
+            naciLabel.AutoSize = true;
+            naciLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            naciLabel.Location = new Point(50, 248);
+            naciLabel.Name = "naciLabel";
+            naciLabel.Size = new Size(134, 25);
+            naciLabel.TabIndex = 14;
+            naciLabel.Text = "Nacionalidade";
             // 
-            // nacionalidadeLabel
+            // senhaLabel
             // 
-            nacionalidadeLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            nacionalidadeLabel.Location = new Point(12, 228);
-            nacionalidadeLabel.Name = "nacionalidadeLabel";
-            nacionalidadeLabel.Size = new Size(172, 41);
-            nacionalidadeLabel.TabIndex = 8;
-            nacionalidadeLabel.Text = "nacionalidade";
+            senhaLabel.AutoSize = true;
+            senhaLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            senhaLabel.Location = new Point(424, 147);
+            senhaLabel.Name = "senhaLabel";
+            senhaLabel.Size = new Size(64, 25);
+            senhaLabel.TabIndex = 15;
+            senhaLabel.Text = "Senha";
             // 
-            // naciTextBox
+            // nomeTextBox
             // 
-            naciTextBox.Location = new Point(190, 239);
-            naciTextBox.Name = "naciTextBox";
-            naciTextBox.Size = new Size(161, 23);
-            naciTextBox.TabIndex = 9;
+            nomeTextBox.Location = new Point(182, 97);
+            nomeTextBox.Name = "nomeTextBox";
+            nomeTextBox.Size = new Size(170, 23);
+            nomeTextBox.TabIndex = 16;
             // 
-            // Form2
+            // emailTextBox
+            // 
+            emailTextBox.Location = new Point(182, 147);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(170, 23);
+            emailTextBox.TabIndex = 17;
+            // 
+            // telefoneTextBox
+            // 
+            telefoneTextBox.Location = new Point(182, 197);
+            telefoneTextBox.Name = "telefoneTextBox";
+            telefoneTextBox.Size = new Size(170, 23);
+            telefoneTextBox.TabIndex = 18;
+            // 
+            // nacionalidadeTextBox
+            // 
+            nacionalidadeTextBox.Location = new Point(190, 253);
+            nacionalidadeTextBox.Name = "nacionalidadeTextBox";
+            nacionalidadeTextBox.Size = new Size(170, 23);
+            nacionalidadeTextBox.TabIndex = 19;
+            // 
+            // senhaTextBox
+            // 
+            senhaTextBox.Location = new Point(494, 149);
+            senhaTextBox.Name = "senhaTextBox";
+            senhaTextBox.Size = new Size(170, 23);
+            senhaTextBox.TabIndex = 20;
+            // 
+            // telaCadastroCorretor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             ClientSize = new Size(800, 450);
-            Controls.Add(naciTextBox);
-            Controls.Add(nacionalidadeLabel);
-            Controls.Add(telTextBox);
-            Controls.Add(telefoneLabel);
+            Controls.Add(senhaTextBox);
+            Controls.Add(nacionalidadeTextBox);
+            Controls.Add(telefoneTextBox);
             Controls.Add(emailTextBox);
-            Controls.Add(emailLabel);
             Controls.Add(nomeTextBox);
+            Controls.Add(senhaLabel);
+            Controls.Add(naciLabel);
+            Controls.Add(telefoneLabel);
+            Controls.Add(emailLabel);
             Controls.Add(nomeLabel);
             Controls.Add(cadastrarButton);
             Controls.Add(voltarButton);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
-            Name = "Form2";
-            RightToLeft = RightToLeft.Yes;
+            Name = "telaCadastroCorretor";
+            RightToLeft = RightToLeft.No;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "Cadastro Corretor";
             FormClosed += Form2_FormClosed;
             ResumeLayout(false);
             PerformLayout();
@@ -156,12 +181,14 @@
         private Button voltarButton;
         private Button cadastrarButton;
         private Label nomeLabel;
-        private TextBox nomeTextBox;
         private Label emailLabel;
-        private TextBox emailTextBox;
         private Label telefoneLabel;
-        private TextBox telTextBox;
-        private Label nacionalidadeLabel;
-        private TextBox naciTextBox;
+        private Label naciLabel;
+        private Label senhaLabel;
+        private TextBox nomeTextBox;
+        private TextBox emailTextBox;
+        private TextBox telefoneTextBox;
+        private TextBox nacionalidadeTextBox;
+        private TextBox senhaTextBox;
     }
 }
