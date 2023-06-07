@@ -33,9 +33,9 @@ namespace Portal.BLLService.Controllers
             try
             {
                 Imovel _imovel = ImovelRepository.GetByID(Id);
-                if (_imovel != null) 
+                if (_imovel != null)
                 {
-                    return Ok(_imovel); 
+                    return Ok(_imovel);
                 }
                 return NotFound();
             }
@@ -53,10 +53,26 @@ namespace Portal.BLLService.Controllers
             {
                 ImovelRepository.Add(imovel);
                 return CreatedAtAction(nameof(GetImovelByID),
-                    new {id = imovel.Id},
-                    imovel);          
+                    new { id = imovel.Id },
+                    imovel);
             }
             catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpDelete(Name = "DeleteImovel")]
+
+        public ActionResult DeleteImovel(int id)
+        {
+            try
+            {
+                var imovel = ImovelRepository.GetByID(id);
+                ImovelRepository.Excluir(imovel);
+                return Ok();
+            }
+            catch(Exception ex)
             {
                 return StatusCode(500, ex.Message);
             }
