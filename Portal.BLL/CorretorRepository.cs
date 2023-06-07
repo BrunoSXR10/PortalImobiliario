@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portal.BLL
 {
-    internal class CorretorRepository
+    public static class CorretorRepository
     {
         public static void Add(Corretor _corretor)
         {

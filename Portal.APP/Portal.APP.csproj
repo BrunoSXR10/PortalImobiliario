@@ -9,6 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Form7.cs" />
+    <Compile Remove="Form7.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Form7.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Portal.BLL\Portal.BLL.csproj" />
     <ProjectReference Include="..\Portal.MODEL\Portal.MODEL.csproj" />
   </ItemGroup>

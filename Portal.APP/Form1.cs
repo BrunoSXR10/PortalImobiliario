@@ -4,6 +4,7 @@ namespace Portal.APP
     {
         Form2 form2 = new Form2();
         Form3 form3 = new Form3();
+        Form4 form4 = new Form4();
 
         public Form1()
         {
@@ -19,6 +20,12 @@ namespace Portal.APP
         private void button2_Click(object sender, EventArgs e)
         {
             form3.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            form4.Show();
             this.Hide();
         }
     }
