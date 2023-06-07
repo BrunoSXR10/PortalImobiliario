@@ -32,6 +32,7 @@
             titulo = new Label();
             button1 = new Button();
             button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // titulo
@@ -45,7 +46,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(253, 98);
+            button1.Location = new Point(12, 85);
             button1.Name = "button1";
             button1.Size = new Size(280, 108);
             button1.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(253, 245);
+            button2.Location = new Point(326, 81);
             button2.Name = "button2";
             button2.Size = new Size(280, 116);
             button2.TabIndex = 2;
@@ -63,11 +64,22 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(186, 247);
+            button3.Name = "button3";
+            button3.Size = new Size(319, 131);
+            button3.TabIndex = 3;
+            button3.Text = "login";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(titulo);
@@ -77,6 +89,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Portal Imobiliario";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
@@ -85,5 +98,6 @@
         private Label titulo;
         private Button button1;
         private Button button2;
+        private Button button3;
     }
 }

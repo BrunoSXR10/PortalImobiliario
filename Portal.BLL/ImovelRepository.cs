@@ -11,7 +11,7 @@ namespace Portal.BLL
                 DBContext19.Add(_imovel);
                 DBContext19.SaveChanges();
             }
-        }
+        }  
 
         public static Imovel GetByID(int Id)
         {

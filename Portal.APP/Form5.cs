@@ -7,39 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Portal.BLL;
-using Portal.MODEL;
 
 namespace Portal.APP
 {
-    public partial class Form3 : Form
+    public partial class Form5 : Form
     {
         
-
-        public Form3()
+        public Form5()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
+            Form6 form6 = new Form6();
+            form6.Show();
             this.Hide();
         }
 
-        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        private void Form5_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            List<Imovel> imovel = ImovelRepository.GetAll();
-            dataGridView1.DataSource = imovel;
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
+        private void Form5_Load(object sender, EventArgs e)
         {
 
         }
