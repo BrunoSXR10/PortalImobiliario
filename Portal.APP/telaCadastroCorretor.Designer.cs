@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            sairButton = new Button();
+            buttonButton = new Button();
             voltarButton = new Button();
             cadastrarButton = new Button();
             nomeLabel = new Label();
