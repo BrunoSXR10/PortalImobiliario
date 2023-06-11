@@ -1,4 +1,5 @@
 ﻿using Portal.MODEL;
+using Portal.DAL.DBContext19;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,52 +10,53 @@ namespace Portal.BLL
 {
     public static class CorretorRepository
     {
-        public static void Add(Corretor _corretor)
+        public static void Add(TbCorretor _corretor)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
                 DBContext19.Add(_corretor);
                 DBContext19.SaveChanges();
             }
         }
 
-        public static Corretor GetByID(int Id)
+        public static TbCorretor GetByID(int Id)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var corretor = DBContext19.Corretors.Single(p => p.Id == Id);
+                var corretor = DBContext19.TbCorretors.Single(p => p.IdCorretor == Id);
                 return corretor;
             }
         }
 
-        public static List<Corretor> GetAll()
+        public static List<TbCorretor> GetAll()
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var corretor = DBContext19.Corretors.ToList();
+                var corretor = DBContext19.TbCorretors.ToList();
                 return corretor;
             }
         }
 
-        public static void Update(Corretor _corretor)
+        public static void Update(TbCorretor _corretor)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var corretor = DBContext19.Corretors.Single(p => p.Id == _corretor.Id);
+                var corretor = DBContext19.TbCorretors.Single(p => p.IdCorretor == _corretor.IdCorretor);
                 corretor.Nome = _corretor.Nome;
-                corretor.Email = _corretor.Email;
-                corretor.Telefone = _corretor.Telefone;
+                corretor.Senha = _corretor.Senha;
+                corretor.Cpf = _corretor.Cpf;
                 corretor.Deputado = _corretor.Deputado;
+                corretor.DtNascimento = _corretor.DtNascimento;
                 DBContext19.SaveChanges();
 
             }
         }
-        public static void Excluir(Imovel _imovel)
+        public static void Excluir(TbCorretor _corretor)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var imovel = DBContext19.Imovels.Single(p => p.Id == _imovel.Id);
-                DBContext19.Remove(imovel);
+                var corretor = DBContext19.TbCorretors.Single(p => p.IdCorretor == _corretor.IdCorretor);
+                DBContext19.Remove(corretor);
                 DBContext19.SaveChanges();
             }
         }

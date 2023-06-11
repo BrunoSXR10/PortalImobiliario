@@ -4,52 +4,51 @@ namespace Portal.BLL
 {
     public class ImovelRepository
     {
-        public static void Add(Imovel _imovel)
+        public static void Add(TbImovel _imovel)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
                 DBContext19.Add(_imovel);
                 DBContext19.SaveChanges();
             }
         }  
 
-        public static Imovel GetByID(int Id)
+        public static TbImovel GetByID(int Id)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var imovel = DBContext19.Imovels.Single(p => p.Id == Id);
+                var imovel = DBContext19.TbImovels.Single(p => p.IdImovel == Id);
                 return imovel;
             }
         }
 
-        public static List<Imovel> GetAll()
+        public static List<TbImovel> GetAll()
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var imovels = DBContext19.Imovels.ToList();
+                var imovels = DBContext19.TbImovels.ToList();
                 return imovels;
             }
         }
 
         
-        public static void Update(Imovel _imovel)
+        public static void Update(TbImovel _imovel)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var imovel = DBContext19.Imovels.Single(p => p.Id == _imovel.Id);
+                var imovel = DBContext19.TbImovels.Single(p => p.IdImovel == _imovel.IdImovel);
                 imovel.Descricao = _imovel.Descricao;
                 imovel.Valor = _imovel.Valor;
-                imovel.Localizacao = _imovel.Localizacao;
                 DBContext19.SaveChanges();
 
             }
         }
         
-        public static void Excluir(Imovel _imovel)
+        public static void Excluir(TbImovel _imovel)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposWindowsformsapp1PortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var imovel = DBContext19.Imovels.Single(p => p.Id == _imovel.Id);
+                var imovel = DBContext19.TbImovels.Single(p => p.IdImovel == _imovel.IdImovel);
                 DBContext19.Remove(imovel);
                 DBContext19.SaveChanges();
             }
