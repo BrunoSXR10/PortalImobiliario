@@ -37,7 +37,6 @@ namespace Portal.APP
         {
             TbCorretor c = new TbCorretor();
             c.Nome = nomeTextBox.Text;
-            c.Email = emailTextBox.Text;
             c.Deputado = nacionalidadeTextBox.Text;
             string objetoJson = JsonConvert.SerializeObject(c);
             using (HttpClient client = new HttpClient())
@@ -78,34 +77,7 @@ namespace Portal.APP
 
         }
 
-        private void telaCadastroCorretor_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void naciLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void telefoneLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emailLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nomeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+       
+     
     }
 }
