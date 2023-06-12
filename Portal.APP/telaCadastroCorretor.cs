@@ -28,7 +28,6 @@ namespace Portal.APP
         {
             Corretor c = new Corretor();
             c.Nome = nomeTextBox.Text;
-            c.Email = cpfTextBox.Text;
             c.Deputado = nacionalidadeTextBox.Text;
             string objetoJson = JsonConvert.SerializeObject(c);
             using (HttpClient client = new HttpClient())
