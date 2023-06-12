@@ -127,7 +127,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-11, 11);
+            pictureBox1.Location = new Point(-20, -9);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(864, 487);
@@ -192,6 +192,7 @@
             Controls.Add(voltarButton);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "telaCadastroCorretor";
             RightToLeft = RightToLeft.No;

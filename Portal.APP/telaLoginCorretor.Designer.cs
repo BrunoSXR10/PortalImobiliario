@@ -28,43 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaLoginCorretor));
             voltarButton = new Button();
             loginLabel = new Label();
             loginTextBox = new TextBox();
             senhaTextBox = new TextBox();
             senhaLabel = new Label();
             loginButton = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // voltarButton
             // 
-            voltarButton.Location = new Point(588, 348);
+            voltarButton.BackColor = Color.PapayaWhip;
+            voltarButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            voltarButton.Location = new Point(698, 400);
             voltarButton.Name = "voltarButton";
-            voltarButton.Size = new Size(184, 75);
+            voltarButton.Size = new Size(91, 40);
             voltarButton.TabIndex = 0;
             voltarButton.Text = "voltar";
-            voltarButton.UseVisualStyleBackColor = true;
+            voltarButton.UseVisualStyleBackColor = false;
             voltarButton.Click += voltarButton_Click;
             // 
             // loginLabel
             // 
+            loginLabel.BackColor = Color.PapayaWhip;
             loginLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            loginLabel.Location = new Point(196, 117);
+            loginLabel.Location = new Point(226, 117);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(80, 35);
+            loginLabel.Size = new Size(70, 28);
             loginLabel.TabIndex = 1;
             loginLabel.Text = "Login";
             // 
             // loginTextBox
             // 
-            loginTextBox.Location = new Point(292, 122);
+            loginTextBox.Location = new Point(318, 122);
             loginTextBox.Name = "loginTextBox";
             loginTextBox.Size = new Size(226, 23);
             loginTextBox.TabIndex = 2;
             // 
             // senhaTextBox
             // 
-            senhaTextBox.Location = new Point(292, 198);
+            senhaTextBox.Location = new Point(318, 203);
             senhaTextBox.Name = "senhaTextBox";
             senhaTextBox.Size = new Size(226, 23);
             senhaTextBox.TabIndex = 3;
@@ -72,27 +78,41 @@
             // 
             // senhaLabel
             // 
+            senhaLabel.BackColor = Color.PapayaWhip;
             senhaLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            senhaLabel.Location = new Point(196, 198);
+            senhaLabel.Location = new Point(226, 198);
             senhaLabel.Name = "senhaLabel";
-            senhaLabel.Size = new Size(80, 35);
+            senhaLabel.Size = new Size(70, 28);
             senhaLabel.TabIndex = 4;
             senhaLabel.Text = "Senha";
             // 
             // loginButton
             // 
-            loginButton.Location = new Point(255, 348);
+            loginButton.BackColor = Color.PapayaWhip;
+            loginButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            loginButton.Location = new Point(347, 281);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(223, 75);
+            loginButton.Size = new Size(116, 40);
             loginButton.TabIndex = 5;
             loginButton.Text = "Logar";
-            loginButton.UseVisualStyleBackColor = true;
+            loginButton.UseVisualStyleBackColor = false;
             loginButton.Click += loginButton_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1, -1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(801, 453);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
             // 
             // telaLoginCorretor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 450);
             Controls.Add(loginButton);
             Controls.Add(senhaLabel);
@@ -100,12 +120,15 @@
             Controls.Add(loginTextBox);
             Controls.Add(loginLabel);
             Controls.Add(voltarButton);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "telaLoginCorretor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             FormClosed += Form4_FormClosed;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -118,5 +141,6 @@
         private TextBox senhaTextBox;
         private Label senhaLabel;
         private Button loginButton;
+        private PictureBox pictureBox1;
     }
 }

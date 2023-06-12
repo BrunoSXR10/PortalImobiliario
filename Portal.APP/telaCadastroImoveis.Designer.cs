@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaCadastroImoveis));
             voltarButton = new Button();
             descricaoLabel = new Label();
             valorLabel = new Label();
@@ -185,6 +186,7 @@
             Controls.Add(descricaoLabel);
             Controls.Add(voltarButton);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "telaCadastroImoveis";
             StartPosition = FormStartPosition.CenterScreen;

@@ -28,29 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaGerenciamento));
             cadastrarImovelButton = new Button();
             dataGridView1 = new DataGridView();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // cadastrarImovelButton
             // 
-            cadastrarImovelButton.Location = new Point(512, 177);
+            cadastrarImovelButton.BackColor = Color.IndianRed;
+            cadastrarImovelButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            cadastrarImovelButton.Location = new Point(522, 178);
             cadastrarImovelButton.Name = "cadastrarImovelButton";
-            cadastrarImovelButton.Size = new Size(232, 68);
+            cadastrarImovelButton.Size = new Size(227, 38);
             cadastrarImovelButton.TabIndex = 0;
             cadastrarImovelButton.Text = "cadastrar imovel";
-            cadastrarImovelButton.UseVisualStyleBackColor = true;
+            cadastrarImovelButton.UseVisualStyleBackColor = false;
             cadastrarImovelButton.Click += cadastrarImovelButton_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(157, 45);
+            dataGridView1.Location = new Point(126, 66);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(310, 325);
+            dataGridView1.Size = new Size(361, 320);
             dataGridView1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-1, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(802, 448);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // telaGerenciamento
             // 
@@ -59,13 +74,16 @@
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
             Controls.Add(cadastrarImovelButton);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "telaGerenciamento";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gerenciamento";
             FormClosed += Form5_FormClosed;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -73,5 +91,6 @@
 
         private Button cadastrarImovelButton;
         private DataGridView dataGridView1;
+        private PictureBox pictureBox1;
     }
 }

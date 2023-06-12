@@ -32,36 +32,53 @@
             titulo = new Label();
             cadastrarButton = new Button();
             loginButton = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // titulo
             // 
-            titulo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            titulo.Location = new Point(288, 28);
+            titulo.BackColor = SystemColors.ActiveCaption;
+            titulo.Font = new Font("Consolas", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            titulo.Location = new Point(238, 42);
             titulo.Name = "titulo";
-            titulo.Size = new Size(204, 42);
+            titulo.Size = new Size(341, 39);
             titulo.TabIndex = 0;
             titulo.Text = "Portal Imobiliario";
             // 
             // cadastrarButton
             // 
-            cadastrarButton.Location = new Point(62, 123);
+            cadastrarButton.BackColor = SystemColors.ActiveCaption;
+            cadastrarButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            cadastrarButton.Location = new Point(192, 221);
             cadastrarButton.Name = "cadastrarButton";
-            cadastrarButton.Size = new Size(280, 108);
+            cadastrarButton.Size = new Size(151, 51);
             cadastrarButton.TabIndex = 1;
             cadastrarButton.Text = "cadastre-se";
-            cadastrarButton.UseVisualStyleBackColor = true;
+            cadastrarButton.UseVisualStyleBackColor = false;
             cadastrarButton.Click += cadastrarButton_Click;
             // 
             // loginButton
             // 
-            loginButton.Location = new Point(446, 121);
+            loginButton.BackColor = SystemColors.ActiveCaption;
+            loginButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            loginButton.Location = new Point(457, 221);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(281, 113);
+            loginButton.Size = new Size(175, 51);
             loginButton.TabIndex = 3;
             loginButton.Text = "login";
-            loginButton.UseVisualStyleBackColor = true;
+            loginButton.UseVisualStyleBackColor = false;
             loginButton.Click += loginButton_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-1, -1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(800, 453);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // telaInicial
             // 
@@ -71,12 +88,14 @@
             Controls.Add(loginButton);
             Controls.Add(cadastrarButton);
             Controls.Add(titulo);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "telaInicial";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Portal Imobiliario";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -85,5 +104,6 @@
         private Label titulo;
         private Button cadastrarButton;
         private Button loginButton;
+        private PictureBox pictureBox1;
     }
 }
