@@ -28,143 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaCadastroCorretor));
             voltarButton = new Button();
             cadastrarButton = new Button();
             nomeLabel = new Label();
-            emailLabel = new Label();
-            telefoneLabel = new Label();
             naciLabel = new Label();
             senhaLabel = new Label();
             nomeTextBox = new TextBox();
-            emailTextBox = new TextBox();
-            telefoneTextBox = new TextBox();
-            nacionalidadeTextBox = new TextBox();
+            cpfTextBox = new TextBox();
             senhaTextBox = new TextBox();
+            pictureBox1 = new PictureBox();
+            nacionalidadeTextBox = new TextBox();
+            cpfLabel = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // voltarButton
             // 
-            voltarButton.Location = new Point(564, 328);
+            voltarButton.BackColor = Color.HotPink;
+            voltarButton.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            voltarButton.Location = new Point(698, 400);
             voltarButton.Name = "voltarButton";
-            voltarButton.Size = new Size(125, 70);
+            voltarButton.Size = new Size(91, 40);
             voltarButton.TabIndex = 0;
             voltarButton.Text = "voltar";
-            voltarButton.UseVisualStyleBackColor = true;
+            voltarButton.UseVisualStyleBackColor = false;
             voltarButton.Click += voltarButton_Click;
             // 
             // cadastrarButton
             // 
-            cadastrarButton.Location = new Point(126, 332);
+            cadastrarButton.BackColor = Color.HotPink;
+            cadastrarButton.Font = new Font("Consolas", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            cadastrarButton.Location = new Point(347, 322);
             cadastrarButton.Name = "cadastrarButton";
-            cadastrarButton.Size = new Size(180, 62);
+            cadastrarButton.Size = new Size(116, 40);
             cadastrarButton.TabIndex = 1;
             cadastrarButton.Text = "cadastre-se";
-            cadastrarButton.UseVisualStyleBackColor = true;
+            cadastrarButton.UseVisualStyleBackColor = false;
             cadastrarButton.Click += cadastrarButton_Click;
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            nomeLabel.Location = new Point(88, 92);
+            nomeLabel.BackColor = Color.Pink;
+            nomeLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
+            nomeLabel.Location = new Point(171, 113);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new Size(63, 25);
+            nomeLabel.Size = new Size(50, 22);
             nomeLabel.TabIndex = 11;
             nomeLabel.Text = "Nome";
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            emailLabel.Location = new Point(93, 142);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(58, 25);
-            emailLabel.TabIndex = 12;
-            emailLabel.Text = "Email";
-            // 
-            // telefoneLabel
-            // 
-            telefoneLabel.AutoSize = true;
-            telefoneLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            telefoneLabel.Location = new Point(79, 195);
-            telefoneLabel.Name = "telefoneLabel";
-            telefoneLabel.Size = new Size(83, 25);
-            telefoneLabel.TabIndex = 13;
-            telefoneLabel.Text = "Telefone";
             // 
             // naciLabel
             // 
             naciLabel.AutoSize = true;
-            naciLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            naciLabel.Location = new Point(50, 248);
+            naciLabel.BackColor = Color.Pink;
+            naciLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
+            naciLabel.Location = new Point(122, 267);
             naciLabel.Name = "naciLabel";
-            naciLabel.Size = new Size(134, 25);
+            naciLabel.Size = new Size(140, 22);
             naciLabel.TabIndex = 14;
             naciLabel.Text = "Nacionalidade";
+            naciLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // senhaLabel
             // 
             senhaLabel.AutoSize = true;
-            senhaLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            senhaLabel.Location = new Point(424, 147);
+            senhaLabel.BackColor = Color.Pink;
+            senhaLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
+            senhaLabel.Location = new Point(161, 212);
             senhaLabel.Name = "senhaLabel";
-            senhaLabel.Size = new Size(64, 25);
+            senhaLabel.Size = new Size(60, 22);
             senhaLabel.TabIndex = 15;
             senhaLabel.Text = "Senha";
             // 
             // nomeTextBox
             // 
-            nomeTextBox.Location = new Point(182, 97);
+            nomeTextBox.Location = new Point(315, 112);
             nomeTextBox.Name = "nomeTextBox";
             nomeTextBox.Size = new Size(170, 23);
             nomeTextBox.TabIndex = 16;
             // 
-            // emailTextBox
+            // cpfTextBox
             // 
-            emailTextBox.Location = new Point(182, 147);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(170, 23);
-            emailTextBox.TabIndex = 17;
+            cpfTextBox.Location = new Point(315, 157);
+            cpfTextBox.Name = "cpfTextBox";
+            cpfTextBox.Size = new Size(170, 23);
+            cpfTextBox.TabIndex = 17;
             // 
-            // telefoneTextBox
+            // senhaTextBox
             // 
-            telefoneTextBox.Location = new Point(182, 197);
-            telefoneTextBox.Name = "telefoneTextBox";
-            telefoneTextBox.Size = new Size(170, 23);
-            telefoneTextBox.TabIndex = 18;
+            senhaTextBox.Location = new Point(315, 267);
+            senhaTextBox.Name = "senhaTextBox";
+            senhaTextBox.Size = new Size(170, 23);
+            senhaTextBox.TabIndex = 20;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-4, 1);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(864, 487);
+            pictureBox1.TabIndex = 21;
+            pictureBox1.TabStop = false;
             // 
             // nacionalidadeTextBox
             // 
-            nacionalidadeTextBox.Location = new Point(190, 253);
+            nacionalidadeTextBox.Location = new Point(315, 213);
             nacionalidadeTextBox.Name = "nacionalidadeTextBox";
             nacionalidadeTextBox.Size = new Size(170, 23);
             nacionalidadeTextBox.TabIndex = 19;
             // 
-            // senhaTextBox
+            // cpfLabel
             // 
-            senhaTextBox.Location = new Point(494, 149);
-            senhaTextBox.Name = "senhaTextBox";
-            senhaTextBox.Size = new Size(170, 23);
-            senhaTextBox.TabIndex = 20;
+            cpfLabel.AutoSize = true;
+            cpfLabel.BackColor = Color.Pink;
+            cpfLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
+            cpfLabel.Location = new Point(171, 167);
+            cpfLabel.Name = "cpfLabel";
+            cpfLabel.Size = new Size(40, 22);
+            cpfLabel.TabIndex = 12;
+            cpfLabel.Text = "CPF";
             // 
             // telaCadastroCorretor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
+            BackColor = Color.Gainsboro;
             ClientSize = new Size(800, 450);
             Controls.Add(senhaTextBox);
             Controls.Add(nacionalidadeTextBox);
-            Controls.Add(telefoneTextBox);
-            Controls.Add(emailTextBox);
+            Controls.Add(cpfTextBox);
             Controls.Add(nomeTextBox);
             Controls.Add(senhaLabel);
             Controls.Add(naciLabel);
-            Controls.Add(telefoneLabel);
-            Controls.Add(emailLabel);
+            Controls.Add(cpfLabel);
             Controls.Add(nomeLabel);
             Controls.Add(cadastrarButton);
             Controls.Add(voltarButton);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "telaCadastroCorretor";
@@ -172,6 +175,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Corretor";
             FormClosed += Form2_FormClosed;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -187,9 +191,10 @@
         private Label senhaLabel;
         private TextBox nomeTextBox;
         private TextBox cpfTextBox;
-        private TextBox emailTextBox;
         private TextBox telefoneTextBox;
-        private TextBox nacionalidadeTextBox;
         private TextBox senhaTextBox;
+        private PictureBox pictureBox1;
+        private TextBox nacionalidadeTextBox;
+        private Label cpfLabel;
     }
 }
