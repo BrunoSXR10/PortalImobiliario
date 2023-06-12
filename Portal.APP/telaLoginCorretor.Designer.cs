@@ -68,6 +68,7 @@
             senhaTextBox.Name = "senhaTextBox";
             senhaTextBox.Size = new Size(226, 23);
             senhaTextBox.TabIndex = 3;
+            senhaTextBox.UseSystemPasswordChar = true;
             // 
             // senhaLabel
             // 
@@ -88,7 +89,7 @@
             loginButton.UseVisualStyleBackColor = true;
             loginButton.Click += loginButton_Click;
             // 
-            // Form4
+            // telaLoginCorretor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -101,7 +102,7 @@
             Controls.Add(voltarButton);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
-            Name = "Form4";
+            Name = "telaLoginCorretor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             FormClosed += Form4_FormClosed;

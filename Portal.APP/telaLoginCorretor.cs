@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Azure;
+using System.Reflection.Metadata;
+using System.Security.Policy;
+using Portal.MODEL;
 
 namespace Portal.APP
 {
     public partial class telaLoginCorretor : Form
     {
+
         public telaLoginCorretor()
         {
             InitializeComponent();
         }
-
         private void voltarButton_Click(object sender, EventArgs e)
         {
             telaInicial form1 = new telaInicial();
@@ -24,18 +30,48 @@ namespace Portal.APP
             this.Hide();
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private async void loginButton_Click(object sender, EventArgs e)
         {
-            //logou
-            telaGerenciamento form5 = new telaGerenciamento();
-            form5.Show();
-            this.Hide();
+
+            string apiUrl = "http://localhost:5205/api/Corretor";
+            int cpf = int.Parse(loginTextBox.Text);
+            string senha = senhaTextBox.Text;
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync($"{apiUrl}/Corretor?x={cpf}");
+                HttpResponseMessage response2 = await client.GetAsync($"{apiUrl}/Corretor?x={senha}");
+                try
+                {
+                    if (response.IsSuccessStatusCode && response2.IsSuccessStatusCode)
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
+                        var usuarioEncontrado = JsonConvert.DeserializeObject<TbCorretor>(apiResponse);
+                        int id = usuarioEncontrado.IdCorretor;
+                        getIdLogin = id;
+                        telaGerenciamento form5 = new telaGerenciamento();
+                        form5.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possivel logar, Login ou senha errados!");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Erro da API: " + response.StatusCode);
+                }
+            }
+
         }
 
         private void Form4_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
+
+        public int getIdLogin { get; set; }
 
     }
 }

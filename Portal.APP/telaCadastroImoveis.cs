@@ -41,15 +41,17 @@ namespace Portal.APP
 
             TbImovel i = new TbImovel();
             TbEndereco endereco = new TbEndereco();
+            TbCorretor c = new TbCorretor();
+            telaLoginCorretor t = new telaLoginCorretor();
             i.Descricao = descricaoTextBox.Text;
             i.Valor = float.Parse(valorTextBox.Text);
             endereco.Cep = int.Parse(cepTextBox.Text);
             endereco.Numero = int.Parse(numeroTextBox.Text);
             endereco.Logradoro = logradouroTextBox.Text;
             endereco.Complemento = complementoTextBox.Text;
+            c.IdCorretor = t.getIdLogin;
             i.IdEndereco = endereco.IdEndereco;
-            
-
+            i.IdCorretor = c.IdCorretor;
 
             string objetoJson = JsonConvert.SerializeObject(i);
             using (HttpClient client = new HttpClient())
