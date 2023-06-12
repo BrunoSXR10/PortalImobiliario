@@ -40,6 +40,8 @@
             pictureBox1 = new PictureBox();
             nacionalidadeTextBox = new TextBox();
             cpfLabel = new Label();
+            dataLabel = new Label();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,7 +61,7 @@
             // 
             cadastrarButton.BackColor = Color.HotPink;
             cadastrarButton.Font = new Font("Consolas", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            cadastrarButton.Location = new Point(347, 322);
+            cadastrarButton.Location = new Point(345, 358);
             cadastrarButton.Name = "cadastrarButton";
             cadastrarButton.Size = new Size(116, 40);
             cadastrarButton.TabIndex = 1;
@@ -72,7 +74,7 @@
             nomeLabel.AutoSize = true;
             nomeLabel.BackColor = Color.Pink;
             nomeLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
-            nomeLabel.Location = new Point(171, 113);
+            nomeLabel.Location = new Point(181, 114);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new Size(50, 22);
             nomeLabel.TabIndex = 11;
@@ -83,7 +85,7 @@
             naciLabel.AutoSize = true;
             naciLabel.BackColor = Color.Pink;
             naciLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
-            naciLabel.Location = new Point(122, 267);
+            naciLabel.Location = new Point(126, 313);
             naciLabel.Name = "naciLabel";
             naciLabel.Size = new Size(140, 22);
             naciLabel.TabIndex = 14;
@@ -95,7 +97,7 @@
             senhaLabel.AutoSize = true;
             senhaLabel.BackColor = Color.Pink;
             senhaLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
-            senhaLabel.Location = new Point(161, 212);
+            senhaLabel.Location = new Point(171, 263);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new Size(60, 22);
             senhaLabel.TabIndex = 15;
@@ -103,21 +105,21 @@
             // 
             // nomeTextBox
             // 
-            nomeTextBox.Location = new Point(315, 112);
+            nomeTextBox.Location = new Point(315, 113);
             nomeTextBox.Name = "nomeTextBox";
             nomeTextBox.Size = new Size(170, 23);
             nomeTextBox.TabIndex = 16;
             // 
             // cpfTextBox
             // 
-            cpfTextBox.Location = new Point(315, 166);
+            cpfTextBox.Location = new Point(315, 160);
             cpfTextBox.Name = "cpfTextBox";
             cpfTextBox.Size = new Size(170, 23);
             cpfTextBox.TabIndex = 17;
             // 
             // senhaTextBox
             // 
-            senhaTextBox.Location = new Point(315, 267);
+            senhaTextBox.Location = new Point(315, 314);
             senhaTextBox.Name = "senhaTextBox";
             senhaTextBox.Size = new Size(170, 23);
             senhaTextBox.TabIndex = 20;
@@ -134,7 +136,7 @@
             // 
             // nacionalidadeTextBox
             // 
-            nacionalidadeTextBox.Location = new Point(315, 213);
+            nacionalidadeTextBox.Location = new Point(315, 264);
             nacionalidadeTextBox.Name = "nacionalidadeTextBox";
             nacionalidadeTextBox.Size = new Size(170, 23);
             nacionalidadeTextBox.TabIndex = 19;
@@ -145,11 +147,29 @@
             cpfLabel.AutoSize = true;
             cpfLabel.BackColor = Color.Pink;
             cpfLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
-            cpfLabel.Location = new Point(171, 167);
+            cpfLabel.Location = new Point(181, 159);
             cpfLabel.Name = "cpfLabel";
             cpfLabel.Size = new Size(40, 22);
             cpfLabel.TabIndex = 12;
             cpfLabel.Text = "CPF";
+            // 
+            // dataLabel
+            // 
+            dataLabel.AutoSize = true;
+            dataLabel.BackColor = Color.Pink;
+            dataLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataLabel.Location = new Point(108, 209);
+            dataLabel.Name = "dataLabel";
+            dataLabel.Size = new Size(190, 22);
+            dataLabel.TabIndex = 22;
+            dataLabel.Text = "Data de nascimento";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(315, 209);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(233, 23);
+            dateTimePicker1.TabIndex = 23;
             // 
             // telaCadastroCorretor
             // 
@@ -158,6 +178,8 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(800, 450);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(dataLabel);
             Controls.Add(senhaTextBox);
             Controls.Add(nacionalidadeTextBox);
             Controls.Add(cpfTextBox);
@@ -197,5 +219,7 @@
         private PictureBox pictureBox1;
         private TextBox nacionalidadeTextBox;
         private Label cpfLabel;
+        private Label dataLabel;
+        private DateTimePicker dateTimePicker1;
     }
 }

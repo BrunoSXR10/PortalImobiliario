@@ -37,6 +37,8 @@ namespace Portal.APP
         {
             TbCorretor c = new TbCorretor();
             c.Nome = nomeTextBox.Text;
+            c.Senha = senhaTextBox.Text;
+            c.DtNascimento = dateTimePicker1.Value.Date;
             c.Cpf = int.Parse(cpfTextBox.Text);
             c.Deputado = nacionalidadeTextBox.Text;
             string objetoJson = JsonConvert.SerializeObject(c);
