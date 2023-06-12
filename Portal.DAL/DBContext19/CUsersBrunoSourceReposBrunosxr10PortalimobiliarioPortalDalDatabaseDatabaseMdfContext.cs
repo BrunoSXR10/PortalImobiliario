@@ -15,8 +15,6 @@ public partial class CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalD
     {
     }
 
-    public virtual DbSet<Corretor> Corretors { get; set; }
-
     public virtual DbSet<TbCorretor> TbCorretors { get; set; }
 
     public virtual DbSet<TbEndereco> TbEnderecos { get; set; }
@@ -29,31 +27,6 @@ public partial class CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalD
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Corretor>(entity =>
-        {
-            entity
-                .HasNoKey()
-                .ToTable("Corretor");
-
-            entity.Property(e => e.Cpf).HasColumnName("cpf");
-            entity.Property(e => e.Deputado)
-                .HasMaxLength(15)
-                .IsUnicode(false)
-                .HasColumnName("deputado");
-            entity.Property(e => e.DtNascimento)
-                .HasColumnType("date")
-                .HasColumnName("dt_nascimento");
-            entity.Property(e => e.IdCorretor).HasColumnName("ID_corretor");
-            entity.Property(e => e.Nome)
-                .HasMaxLength(70)
-                .IsUnicode(false)
-                .HasColumnName("nome");
-            entity.Property(e => e.Senha)
-                .HasMaxLength(15)
-                .IsUnicode(false)
-                .HasColumnName("senha");
-        });
-
         modelBuilder.Entity<TbCorretor>(entity =>
         {
             entity.HasKey(e => e.IdCorretor).HasName("pk_corretor");

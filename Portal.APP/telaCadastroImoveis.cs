@@ -39,10 +39,9 @@ namespace Portal.APP
         private async void cadastrarButton_Click(object sender, EventArgs e)
         {
             //falta ligacao com o corretor
-            Imovel i = new Imovel();
+            TbImovel i = new TbImovel();
             i.Descricao = descricaoTextBox.Text;
             i.Valor = float.Parse(valorTextBox.Text);
-            i.Localizacao = localizacaoTextBox.Text;
             string objetoJson = JsonConvert.SerializeObject(i);
             using (HttpClient client = new HttpClient())
             {

@@ -27,7 +27,7 @@ namespace Portal.APP
         }
         private void listarImoveisButton_Click(object sender, EventArgs e)
         {
-            List<Imovel> imovel = ImovelRepository.GetAll();
+            List<TbImovel> imovel = ImovelRepository.GetAll();
             dataGridView1.DataSource = imovel;
         }
 

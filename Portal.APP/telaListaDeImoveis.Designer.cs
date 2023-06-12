@@ -99,7 +99,7 @@
             // 
             // imovelBindingSource
             // 
-            imovelBindingSource.DataSource = typeof(MODEL.Imovel);
+            imovelBindingSource.DataSource = typeof(MODEL.TbImovel);
             // 
             // Form3
             // 

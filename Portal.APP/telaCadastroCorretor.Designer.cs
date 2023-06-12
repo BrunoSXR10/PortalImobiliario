@@ -186,6 +186,7 @@
         private Label naciLabel;
         private Label senhaLabel;
         private TextBox nomeTextBox;
+        private TextBox cpfTextBox;
         private TextBox emailTextBox;
         private TextBox telefoneTextBox;
         private TextBox nacionalidadeTextBox;

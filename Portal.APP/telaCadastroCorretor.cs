@@ -35,9 +35,9 @@ namespace Portal.APP
 
         private async void cadastrarButton_Click(object sender, EventArgs e)
         {
-            Corretor c = new Corretor();
+            TbCorretor c = new TbCorretor();
             c.Nome = nomeTextBox.Text;
-            c.Email = emailTextBox.Text;
+            c.Cpf = int.Parse(cpfTextBox.Text);
             c.Deputado = nacionalidadeTextBox.Text;
             string objetoJson = JsonConvert.SerializeObject(c);
             using (HttpClient client = new HttpClient())

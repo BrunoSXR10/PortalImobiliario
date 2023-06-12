@@ -12,11 +12,11 @@ namespace Portal.BLLService.Controllers
     {
         [HttpGet(Name = "GetImovel")]
 
-        public ActionResult<List<Imovel>> GetImovel()
+        public ActionResult<List<TbImovel>> GetImovel()
         {
             try
             {
-                List<Imovel> list = ImovelRepository.GetAll();
+                List<TbImovel> list = ImovelRepository.GetAll();
                 if (list != null) { return Ok(list); }
                 return NotFound();
             }
@@ -28,11 +28,11 @@ namespace Portal.BLLService.Controllers
 
         [HttpGet("{Id}", Name = "GetImovelByID")]
 
-        public ActionResult<Imovel> GetImovelByID(int Id)
+        public ActionResult<TbImovel> GetImovelByID(int Id)
         {
             try
             {
-                Imovel _imovel = ImovelRepository.GetByID(Id);
+                TbImovel _imovel = ImovelRepository.GetByID(Id);
                 if (_imovel != null)
                 {
                     return Ok(_imovel);
@@ -47,13 +47,13 @@ namespace Portal.BLLService.Controllers
 
         [HttpPost(Name = "AddImovel")]
 
-        public IActionResult AddImovel([FromBody] Imovel imovel) //ActionResult<Imovel>
+        public IActionResult AddImovel([FromBody] TbImovel imovel) //ActionResult<Imovel>
         {
             try
             {
                 ImovelRepository.Add(imovel);
                 return CreatedAtAction(nameof(GetImovelByID),
-                    new { id = imovel.Id },
+                    new { id = imovel.IdImovel },
                     imovel);
             }
             catch (Exception ex)
