@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaInicial));
             titulo = new Label();
             cadastrarButton = new Button();
-            listarImoveisButton = new Button();
             loginButton = new Button();
             SuspendLayout();
             // 
@@ -46,7 +45,7 @@
             // 
             // cadastrarButton
             // 
-            cadastrarButton.Location = new Point(51, 85);
+            cadastrarButton.Location = new Point(62, 123);
             cadastrarButton.Name = "cadastrarButton";
             cadastrarButton.Size = new Size(280, 108);
             cadastrarButton.TabIndex = 1;
@@ -54,39 +53,28 @@
             cadastrarButton.UseVisualStyleBackColor = true;
             cadastrarButton.Click += cadastrarButton_Click;
             // 
-            // listarImoveisButton
-            // 
-            listarImoveisButton.Location = new Point(409, 81);
-            listarImoveisButton.Name = "listarImoveisButton";
-            listarImoveisButton.Size = new Size(280, 116);
-            listarImoveisButton.TabIndex = 2;
-            listarImoveisButton.Text = "listar imoveis disponiveis";
-            listarImoveisButton.UseVisualStyleBackColor = true;
-            listarImoveisButton.Click += listarImoveisButton_Click;
-            // 
             // loginButton
             // 
-            loginButton.Location = new Point(186, 247);
+            loginButton.Location = new Point(446, 121);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(319, 131);
+            loginButton.Size = new Size(281, 113);
             loginButton.TabIndex = 3;
             loginButton.Text = "login";
             loginButton.UseVisualStyleBackColor = true;
             loginButton.Click += loginButton_Click;
             // 
-            // Form1
+            // telaInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(loginButton);
-            Controls.Add(listarImoveisButton);
             Controls.Add(cadastrarButton);
             Controls.Add(titulo);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            Name = "Form1";
+            Name = "telaInicial";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Portal Imobiliario";
             ResumeLayout(false);
@@ -96,7 +84,6 @@
 
         private Label titulo;
         private Button cadastrarButton;
-        private Button listarImoveisButton;
         private Button loginButton;
     }
 }

@@ -30,7 +30,6 @@
         {
             cadastrarImovelButton = new Button();
             dataGridView1 = new DataGridView();
-            seusImoveisLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -53,38 +52,26 @@
             dataGridView1.Size = new Size(310, 325);
             dataGridView1.TabIndex = 1;
             // 
-            // seusImoveisLabel
-            // 
-            seusImoveisLabel.AutoSize = true;
-            seusImoveisLabel.Location = new Point(39, 194);
-            seusImoveisLabel.Name = "seusImoveisLabel";
-            seusImoveisLabel.Size = new Size(90, 15);
-            seusImoveisLabel.TabIndex = 2;
-            seusImoveisLabel.Text = "seus imoveis ->";
-            // 
-            // Form5
+            // telaGerenciamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(seusImoveisLabel);
             Controls.Add(dataGridView1);
             Controls.Add(cadastrarImovelButton);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
-            Name = "Form5";
+            Name = "telaGerenciamento";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gerenciamento";
             FormClosed += Form5_FormClosed;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Button cadastrarImovelButton;
         private DataGridView dataGridView1;
-        private Label seusImoveisLabel;
     }
 }

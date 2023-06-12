@@ -15,13 +15,6 @@ namespace Portal.APP
             this.Hide();
         }
 
-        private void listarImoveisButton_Click(object sender, EventArgs e)
-        {
-            telaListaDeImoveis form3 = new telaListaDeImoveis();
-            form3.Show();
-            this.Hide();
-        }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
             telaLoginCorretor form4 = new telaLoginCorretor();

@@ -38,10 +38,19 @@ namespace Portal.APP
 
         private async void cadastrarButton_Click(object sender, EventArgs e)
         {
-            //falta ligacao com o corretor
+
             TbImovel i = new TbImovel();
+            TbEndereco endereco = new TbEndereco();
             i.Descricao = descricaoTextBox.Text;
             i.Valor = float.Parse(valorTextBox.Text);
+            endereco.Cep = int.Parse(cepTextBox.Text);
+            endereco.Numero = int.Parse(numeroTextBox.Text);
+            endereco.Logradoro = logradouroTextBox.Text;
+            endereco.Complemento = complementoTextBox.Text;
+            i.IdEndereco = endereco.IdEndereco;
+            
+
+
             string objetoJson = JsonConvert.SerializeObject(i);
             using (HttpClient client = new HttpClient())
             {
