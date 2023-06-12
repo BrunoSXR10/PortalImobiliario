@@ -110,7 +110,7 @@
             // 
             // cpfTextBox
             // 
-            cpfTextBox.Location = new Point(315, 157);
+            cpfTextBox.Location = new Point(315, 166);
             cpfTextBox.Name = "cpfTextBox";
             cpfTextBox.Size = new Size(170, 23);
             cpfTextBox.TabIndex = 17;
@@ -125,7 +125,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-4, 1);
+            pictureBox1.Location = new Point(-11, 11);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(864, 487);
@@ -138,6 +138,7 @@
             nacionalidadeTextBox.Name = "nacionalidadeTextBox";
             nacionalidadeTextBox.Size = new Size(170, 23);
             nacionalidadeTextBox.TabIndex = 19;
+            nacionalidadeTextBox.UseSystemPasswordChar = true;
             // 
             // cpfLabel
             // 

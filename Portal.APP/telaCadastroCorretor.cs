@@ -37,6 +37,7 @@ namespace Portal.APP
         {
             TbCorretor c = new TbCorretor();
             c.Nome = nomeTextBox.Text;
+            c.Cpf = int.Parse(cpfTextBox.Text);
             c.Deputado = nacionalidadeTextBox.Text;
             string objetoJson = JsonConvert.SerializeObject(c);
             using (HttpClient client = new HttpClient())
@@ -77,7 +78,7 @@ namespace Portal.APP
 
         }
 
-       
-     
+
+
     }
 }
