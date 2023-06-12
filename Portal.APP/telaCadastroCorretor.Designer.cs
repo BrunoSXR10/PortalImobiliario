@@ -36,9 +36,9 @@
             senhaLabel = new Label();
             nomeTextBox = new TextBox();
             cpfTextBox = new TextBox();
-            senhaTextBox = new TextBox();
-            pictureBox1 = new PictureBox();
             nacionalidadeTextBox = new TextBox();
+            pictureBox1 = new PictureBox();
+            senhaTextBox = new TextBox();
             cpfLabel = new Label();
             dataLabel = new Label();
             dateTimePicker1 = new DateTimePicker();
@@ -117,12 +117,12 @@
             cpfTextBox.Size = new Size(170, 23);
             cpfTextBox.TabIndex = 17;
             // 
-            // senhaTextBox
+            // nacionalidadeTextBox
             // 
-            senhaTextBox.Location = new Point(315, 314);
-            senhaTextBox.Name = "senhaTextBox";
-            senhaTextBox.Size = new Size(170, 23);
-            senhaTextBox.TabIndex = 20;
+            nacionalidadeTextBox.Location = new Point(315, 314);
+            nacionalidadeTextBox.Name = "nacionalidadeTextBox";
+            nacionalidadeTextBox.Size = new Size(170, 23);
+            nacionalidadeTextBox.TabIndex = 20;
             // 
             // pictureBox1
             // 
@@ -134,13 +134,13 @@
             pictureBox1.TabIndex = 21;
             pictureBox1.TabStop = false;
             // 
-            // nacionalidadeTextBox
+            // senhaTextBox
             // 
-            nacionalidadeTextBox.Location = new Point(315, 264);
-            nacionalidadeTextBox.Name = "nacionalidadeTextBox";
-            nacionalidadeTextBox.Size = new Size(170, 23);
-            nacionalidadeTextBox.TabIndex = 19;
-            nacionalidadeTextBox.UseSystemPasswordChar = true;
+            senhaTextBox.Location = new Point(315, 264);
+            senhaTextBox.Name = "senhaTextBox";
+            senhaTextBox.Size = new Size(170, 23);
+            senhaTextBox.TabIndex = 19;
+            senhaTextBox.UseSystemPasswordChar = true;
             // 
             // cpfLabel
             // 
@@ -180,8 +180,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(dateTimePicker1);
             Controls.Add(dataLabel);
-            Controls.Add(senhaTextBox);
             Controls.Add(nacionalidadeTextBox);
+            Controls.Add(senhaTextBox);
             Controls.Add(cpfTextBox);
             Controls.Add(nomeTextBox);
             Controls.Add(senhaLabel);
@@ -216,9 +216,9 @@
         private TextBox nomeTextBox;
         private TextBox cpfTextBox;
         private TextBox telefoneTextBox;
-        private TextBox senhaTextBox;
-        private PictureBox pictureBox1;
         private TextBox nacionalidadeTextBox;
+        private PictureBox pictureBox1;
+        private TextBox senhaTextBox;
         private Label cpfLabel;
         private Label dataLabel;
         private DateTimePicker dateTimePicker1;

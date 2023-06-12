@@ -33,7 +33,7 @@ namespace Portal.APP
         private async void loginButton_Click(object sender, EventArgs e)
         {
 
-            string apiUrl = "http://localhost:5205/api/Corretor";
+            string apiUrl = "http://localhost:5205/api";
             int cpf = int.Parse(loginTextBox.Text);
             string senha = senhaTextBox.Text;
 
@@ -55,7 +55,7 @@ namespace Portal.APP
                     }
                     else
                     {
-                        MessageBox.Show("Não foi possivel logar, Login ou senha errados!");
+                        MessageBox.Show("Não foi possivel logar, Login ou senha errados!" + response.StatusCode);
                     }
                 }
                 catch
