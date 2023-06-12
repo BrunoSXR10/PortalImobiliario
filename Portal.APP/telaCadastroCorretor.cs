@@ -1,15 +1,6 @@
-﻿using Portal.MODEL;
-using Portal.BLL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using Newtonsoft.Json;
+using Portal.MODEL;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace Portal.APP
 {
@@ -73,14 +64,6 @@ namespace Portal.APP
             }
 
 
-
-
-
-        }
-
-        private void telaCadastroCorretor_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -88,24 +71,5 @@ namespace Portal.APP
 
         }
 
-        private void naciLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void telefoneLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emailLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nomeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

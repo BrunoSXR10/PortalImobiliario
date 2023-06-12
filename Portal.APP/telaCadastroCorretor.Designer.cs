@@ -77,7 +77,6 @@
             nomeLabel.Size = new Size(50, 22);
             nomeLabel.TabIndex = 11;
             nomeLabel.Text = "Nome";
-            nomeLabel.Click += nomeLabel_Click;
             // 
             // naciLabel
             // 
@@ -90,7 +89,6 @@
             naciLabel.TabIndex = 14;
             naciLabel.Text = "Nacionalidade";
             naciLabel.TextAlign = ContentAlignment.TopCenter;
-            naciLabel.Click += naciLabel_Click;
             // 
             // senhaLabel
             // 
@@ -151,7 +149,6 @@
             cpfLabel.Size = new Size(40, 22);
             cpfLabel.TabIndex = 12;
             cpfLabel.Text = "CPF";
-            cpfLabel.Click += emailLabel_Click;
             // 
             // telaCadastroCorretor
             // 
@@ -178,7 +175,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Corretor";
             FormClosed += Form2_FormClosed;
-            Load += telaCadastroCorretor_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
