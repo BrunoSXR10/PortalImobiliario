@@ -79,7 +79,9 @@ namespace Portal.APP
 
         }
 
+        private void telaCadastroCorretor_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

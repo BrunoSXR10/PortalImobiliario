@@ -79,5 +79,9 @@ namespace Portal.APP
 
         }
 
+        private void descricaoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

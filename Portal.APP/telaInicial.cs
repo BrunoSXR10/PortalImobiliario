@@ -22,6 +22,9 @@ namespace Portal.APP
             this.Hide();
         }
 
+        private void titulo_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

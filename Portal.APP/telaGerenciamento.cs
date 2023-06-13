@@ -50,13 +50,13 @@ namespace Portal.APP
                         MessageBox.Show("Erro ao obter os imoveis");
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao enviar a solicitação para a API: " + ex.Message);
                 }
-               
+
             }
-           
+
 
         }
     }
