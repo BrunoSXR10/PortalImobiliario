@@ -29,6 +29,27 @@ namespace Portal.BLLService.Controllers
             }
         }
 
+        [HttpGet("{cpf}", Name = "GetCorretorByCPF")]
+
+        public ActionResult<Usuario> GetCorretorByCPF(string cpf)
+        {
+            try
+            {
+                Usuario _corretor = CorretorRepository.GetByCpf(cpf);
+                if(_corretor != null)
+                {
+                    return Ok(_corretor);
+                }
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+
+
         [HttpPost(Name = "AddCorretor")]
         public IActionResult AddCorretor([FromBody] Usuario corretor) //ActionResult<Imovel>
         {

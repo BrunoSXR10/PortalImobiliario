@@ -33,17 +33,16 @@ namespace Portal.APP
         private async void loginButton_Click(object sender, EventArgs e)
         {
 
-            string apiUrl = "http://localhost:5205/api";
+            string apiUrl = "http://localhost:5205/api/Corretor";
             string cpf = loginTextBox.Text;
             string senha = senhaTextBox.Text;
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync($"{apiUrl}/Corretor?x={cpf}");
-                HttpResponseMessage response2 = await client.GetAsync($"{apiUrl}/Corretor?x={senha}");
+                HttpResponseMessage response = await client.GetAsync($"{apiUrl}/{cpf}");
                 try
                 {
-                    if (response.IsSuccessStatusCode && response2.IsSuccessStatusCode)
+                    if (response.IsSuccessStatusCode)
                     {
                         string apiResponse = await response.Content.ReadAsStringAsync();
                         var usuarioEncontrado = JsonConvert.DeserializeObject<Usuario>(apiResponse);

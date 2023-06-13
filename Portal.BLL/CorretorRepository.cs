@@ -27,6 +27,16 @@ namespace Portal.BLL
             }
         }
 
+        public static Usuario GetByCpf(string cpf)
+        {
+            using (var DBContext = new CUsersBrunoDesktopProjetolp3PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
+            {
+                var corretorCPF = DBContext.Usuarios.Single(p => p.Cpf == cpf);
+                return corretorCPF;
+            }
+        }
+
+
         public static List<Usuario> GetAll()
         {
             using (var DBContext = new CUsersBrunoDesktopProjetolp3PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
