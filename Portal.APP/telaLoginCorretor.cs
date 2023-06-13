@@ -45,7 +45,6 @@ namespace Portal.APP
                     if (response.IsSuccessStatusCode)
                     {
                         string apiResponse = await response.Content.ReadAsStringAsync();
-                        var usuarioEncontrado = JsonConvert.DeserializeObject<Usuario>(apiResponse);
                         telaGerenciamento form5 = new telaGerenciamento();
                         form5.Show();
                         this.Hide();

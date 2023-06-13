@@ -31,7 +31,7 @@ namespace Portal.BLL
         {
             using (var DBContext = new CUsersBrunoDesktopProjetolp3PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var corretorCPF = DBContext.Usuarios.Single(p => p.Cpf == cpf);
+                var corretorCPF = DBContext.Usuarios.FirstOrDefault(p => p.Cpf == cpf);
                 return corretorCPF;
             }
         }

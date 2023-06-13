@@ -31,7 +31,7 @@ namespace Portal.BLLService.Controllers
 
         [HttpGet("{cpf}", Name = "GetCorretorByCPF")]
 
-        public ActionResult<Usuario> GetCorretorByCPF(string cpf)
+        public IActionResult GetCorretorByCPF(string cpf)
         {
             try
             {
