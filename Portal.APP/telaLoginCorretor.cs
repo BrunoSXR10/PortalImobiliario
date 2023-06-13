@@ -52,7 +52,7 @@ namespace Portal.APP
                     }
                     else
                     {
-                        MessageBox.Show("Não foi possivel logar, Login ou senha errados!" + response.StatusCode);
+                        MessageBox.Show("Não foi possivel logar, Login ou senha errados! " + response.StatusCode);
                     }
                 }
                 catch
