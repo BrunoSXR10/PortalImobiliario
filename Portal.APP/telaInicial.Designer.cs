@@ -40,9 +40,9 @@
             // 
             titulo.BackColor = SystemColors.ActiveCaption;
             titulo.Font = new Font("Consolas", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            titulo.Location = new Point(238, 42);
+            titulo.Location = new Point(379, 34);
             titulo.Name = "titulo";
-            titulo.Size = new Size(341, 39);
+            titulo.Size = new Size(153, 52);
             titulo.TabIndex = 0;
             titulo.Text = "Portal Imobiliario";
             // 
@@ -50,9 +50,10 @@
             // 
             cadastrarButton.BackColor = SystemColors.ActiveCaption;
             cadastrarButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            cadastrarButton.Location = new Point(192, 221);
+            cadastrarButton.Location = new Point(219, 309);
+            cadastrarButton.Margin = new Padding(3, 4, 3, 4);
             cadastrarButton.Name = "cadastrarButton";
-            cadastrarButton.Size = new Size(151, 51);
+            cadastrarButton.Size = new Size(173, 54);
             cadastrarButton.TabIndex = 1;
             cadastrarButton.Text = "cadastre-se";
             cadastrarButton.UseVisualStyleBackColor = false;
@@ -62,9 +63,10 @@
             // 
             loginButton.BackColor = SystemColors.ActiveCaption;
             loginButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            loginButton.Location = new Point(457, 221);
+            loginButton.Location = new Point(537, 309);
+            loginButton.Margin = new Padding(3, 4, 3, 4);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(175, 51);
+            loginButton.Size = new Size(153, 54);
             loginButton.TabIndex = 3;
             loginButton.Text = "login";
             loginButton.UseVisualStyleBackColor = false;
@@ -74,23 +76,25 @@
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(-1, -1);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 453);
+            pictureBox1.Size = new Size(914, 604);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
             // telaInicial
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(loginButton);
             Controls.Add(cadastrarButton);
             Controls.Add(titulo);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "telaInicial";
             StartPosition = FormStartPosition.CenterScreen;

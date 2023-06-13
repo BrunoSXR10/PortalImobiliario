@@ -51,9 +51,10 @@
             // 
             voltarButton.BackColor = SystemColors.ActiveCaption;
             voltarButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            voltarButton.Location = new Point(698, 400);
+            voltarButton.Location = new Point(798, 533);
+            voltarButton.Margin = new Padding(3, 4, 3, 4);
             voltarButton.Name = "voltarButton";
-            voltarButton.Size = new Size(91, 40);
+            voltarButton.Size = new Size(104, 53);
             voltarButton.TabIndex = 0;
             voltarButton.Text = "voltar";
             voltarButton.UseVisualStyleBackColor = false;
@@ -63,44 +64,48 @@
             // 
             descricaoLabel.BackColor = SystemColors.ActiveCaption;
             descricaoLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            descricaoLabel.Location = new Point(143, 42);
+            descricaoLabel.Location = new Point(163, 56);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new Size(101, 27);
+            descricaoLabel.Size = new Size(136, 36);
             descricaoLabel.TabIndex = 1;
-            descricaoLabel.Text = "descricao";
+            descricaoLabel.Text = "descrição";
+            descricaoLabel.Click += descricaoLabel_Click;
             // 
             // valorLabel
             // 
             valorLabel.BackColor = SystemColors.ActiveCaption;
             valorLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            valorLabel.Location = new Point(157, 286);
+            valorLabel.Location = new Point(189, 381);
             valorLabel.Name = "valorLabel";
-            valorLabel.Size = new Size(70, 23);
+            valorLabel.Size = new Size(80, 31);
             valorLabel.TabIndex = 3;
             valorLabel.Text = "valor";
             // 
             // descricaoTextBox
             // 
-            descricaoTextBox.Location = new Point(275, 12);
+            descricaoTextBox.Location = new Point(328, 13);
+            descricaoTextBox.Margin = new Padding(3, 4, 3, 4);
             descricaoTextBox.Multiline = true;
             descricaoTextBox.Name = "descricaoTextBox";
-            descricaoTextBox.Size = new Size(282, 89);
+            descricaoTextBox.Size = new Size(322, 117);
             descricaoTextBox.TabIndex = 4;
             // 
             // valorTextBox
             // 
-            valorTextBox.Location = new Point(275, 286);
+            valorTextBox.Location = new Point(328, 381);
+            valorTextBox.Margin = new Padding(3, 4, 3, 4);
             valorTextBox.Name = "valorTextBox";
-            valorTextBox.Size = new Size(282, 23);
+            valorTextBox.Size = new Size(322, 27);
             valorTextBox.TabIndex = 6;
             // 
             // cadastrarButton
             // 
             cadastrarButton.BackColor = SystemColors.ActiveCaption;
             cadastrarButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            cadastrarButton.Location = new Point(321, 350);
+            cadastrarButton.Location = new Point(370, 453);
+            cadastrarButton.Margin = new Padding(3, 4, 3, 4);
             cadastrarButton.Name = "cadastrarButton";
-            cadastrarButton.Size = new Size(192, 49);
+            cadastrarButton.Size = new Size(219, 65);
             cadastrarButton.TabIndex = 7;
             cadastrarButton.Text = "cadastrar";
             cadastrarButton.UseVisualStyleBackColor = false;
@@ -108,9 +113,10 @@
             // 
             // cepTextBox
             // 
-            cepTextBox.Location = new Point(275, 114);
+            cepTextBox.Location = new Point(328, 152);
+            cepTextBox.Margin = new Padding(3, 4, 3, 4);
             cepTextBox.Name = "cepTextBox";
-            cepTextBox.Size = new Size(282, 23);
+            cepTextBox.Size = new Size(322, 27);
             cepTextBox.TabIndex = 8;
             // 
             // cepLabel
@@ -118,9 +124,9 @@
             cepLabel.AutoSize = true;
             cepLabel.BackColor = SystemColors.ActiveCaption;
             cepLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cepLabel.Location = new Point(171, 114);
+            cepLabel.Location = new Point(195, 152);
             cepLabel.Name = "cepLabel";
-            cepLabel.Size = new Size(40, 22);
+            cepLabel.Size = new Size(51, 28);
             cepLabel.TabIndex = 9;
             cepLabel.Text = "cep";
             // 
@@ -129,9 +135,9 @@
             logradouroLabel.AutoSize = true;
             logradouroLabel.BackColor = SystemColors.ActiveCaption;
             logradouroLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            logradouroLabel.Location = new Point(137, 157);
+            logradouroLabel.Location = new Point(157, 209);
             logradouroLabel.Name = "logradouroLabel";
-            logradouroLabel.Size = new Size(110, 22);
+            logradouroLabel.Size = new Size(142, 28);
             logradouroLabel.TabIndex = 10;
             logradouroLabel.Text = "logradouro";
             // 
@@ -140,59 +146,63 @@
             numeroLabel.AutoSize = true;
             numeroLabel.BackColor = SystemColors.ActiveCaption;
             numeroLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            numeroLabel.Location = new Point(157, 195);
+            numeroLabel.Location = new Point(179, 260);
             numeroLabel.Name = "numeroLabel";
-            numeroLabel.Size = new Size(70, 22);
+            numeroLabel.Size = new Size(90, 28);
             numeroLabel.TabIndex = 11;
-            numeroLabel.Text = "numero";
+            numeroLabel.Text = "número";
             // 
             // complementoLabel
             // 
             complementoLabel.AutoSize = true;
             complementoLabel.BackColor = SystemColors.ActiveCaption;
             complementoLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            complementoLabel.Location = new Point(137, 239);
+            complementoLabel.Location = new Point(157, 319);
             complementoLabel.Name = "complementoLabel";
-            complementoLabel.Size = new Size(120, 22);
+            complementoLabel.Size = new Size(155, 28);
             complementoLabel.TabIndex = 12;
             complementoLabel.Text = "complemento";
             // 
             // complementoTextBox
             // 
-            complementoTextBox.Location = new Point(275, 239);
+            complementoTextBox.Location = new Point(328, 319);
+            complementoTextBox.Margin = new Padding(3, 4, 3, 4);
             complementoTextBox.Name = "complementoTextBox";
-            complementoTextBox.Size = new Size(282, 23);
+            complementoTextBox.Size = new Size(322, 27);
             complementoTextBox.TabIndex = 13;
             // 
             // logradouroTextBox
             // 
-            logradouroTextBox.Location = new Point(275, 159);
+            logradouroTextBox.Location = new Point(328, 212);
+            logradouroTextBox.Margin = new Padding(3, 4, 3, 4);
             logradouroTextBox.Name = "logradouroTextBox";
-            logradouroTextBox.Size = new Size(282, 23);
+            logradouroTextBox.Size = new Size(322, 27);
             logradouroTextBox.TabIndex = 13;
             // 
             // numeroTextBox
             // 
-            numeroTextBox.Location = new Point(275, 200);
+            numeroTextBox.Location = new Point(328, 263);
+            numeroTextBox.Margin = new Padding(3, 4, 3, 4);
             numeroTextBox.Name = "numeroTextBox";
-            numeroTextBox.Size = new Size(282, 23);
+            numeroTextBox.Size = new Size(322, 27);
             numeroTextBox.TabIndex = 14;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ActiveCaption;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-32, -31);
+            pictureBox1.Location = new Point(-37, -41);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(834, 483);
+            pictureBox1.Size = new Size(953, 644);
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
             // 
             // telaCadastroImoveis
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(numeroTextBox);
             Controls.Add(logradouroTextBox);
             Controls.Add(complementoTextBox);
@@ -210,6 +220,7 @@
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "telaCadastroImoveis";
             StartPosition = FormStartPosition.CenterScreen;
