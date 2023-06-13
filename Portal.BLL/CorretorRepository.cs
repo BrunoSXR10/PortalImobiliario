@@ -9,54 +9,63 @@ namespace Portal.BLL
 {
     public static class CorretorRepository
     {
-        public static void Add(TbCorretor _corretor)
+        public static void Add(Usuario _corretor)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext = new CUsersBrunoDesktopProjetolp3PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                DBContext19.Add(_corretor);
-                DBContext19.SaveChanges();
+                DBContext.Add(_corretor);
+                DBContext.SaveChanges();
             }
         }
 
-        public static TbCorretor GetByID(int Id)
+        public static Usuario GetByID(int Id)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext = new CUsersBrunoDesktopProjetolp3PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var corretor = DBContext19.TbCorretors.Single(p => p.IdCorretor == Id);
+                var corretor = DBContext.Usuarios.Single(p => p.Id == Id);
                 return corretor;
             }
         }
 
-        public static List<TbCorretor> GetAll()
+        public static Usuario GetByCpf(string cpf)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext = new CUsersBrunoDesktopProjetolp3PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var corretor = DBContext19.TbCorretors.ToList();
+                var corretorCPF = DBContext.Usuarios.FirstOrDefault(p => p.Cpf == cpf);
+                return corretorCPF;
+            }
+        }
+
+
+        public static List<Usuario> GetAll()
+        {
+            using (var DBContext = new CUsersBrunoDesktopProjetolp3PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
+            {
+                var corretor = DBContext.Usuarios.ToList();
                 return corretor;
             }
         }
 
-        public static void Update(TbCorretor _corretor)
+        public static void Update(Usuario _corretor)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext = new CUsersBrunoDesktopProjetolp3PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var corretor = DBContext19.TbCorretors.Single(p => p.IdCorretor == _corretor.IdCorretor);
+                var corretor = DBContext.Usuarios.Single(p => p.Id == _corretor.Id);
                 corretor.Nome = _corretor.Nome;
                 corretor.Senha = _corretor.Senha;
                 corretor.Cpf = _corretor.Cpf;
                 corretor.Deputado = _corretor.Deputado;
-                corretor.DtNascimento = _corretor.DtNascimento;
-                DBContext19.SaveChanges();
+                DBContext.SaveChanges();
 
             }
         }
-        public static void Excluir(TbCorretor _corretor)
+        public static void Excluir(Usuario _corretor)
         {
-            using (var DBContext19 = new CUsersBrunoSourceReposBrunosxr10PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
+            using (var DBContext = new CUsersBrunoDesktopProjetolp3PortalimobiliarioPortalDalDatabaseDatabaseMdfContext())
             {
-                var corretor = DBContext19.TbCorretors.Single(p => p.IdCorretor == _corretor.IdCorretor);
-                DBContext19.Remove(corretor);
-                DBContext19.SaveChanges();
+                var corretor = DBContext.Usuarios.Single(p => p.Id == _corretor.Id);
+                DBContext.Remove(corretor);
+                DBContext.SaveChanges();
             }
         }
     }

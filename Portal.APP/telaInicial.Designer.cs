@@ -40,20 +40,21 @@
             // 
             titulo.BackColor = SystemColors.ActiveCaption;
             titulo.Font = new Font("Consolas", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            titulo.Location = new Point(379, 34);
+            titulo.Location = new Point(272, 56);
             titulo.Name = "titulo";
-            titulo.Size = new Size(153, 52);
+            titulo.Size = new Size(425, 52);
             titulo.TabIndex = 0;
-            titulo.Text = "Portal Imobiliario";
+            titulo.Text = "Portal Imobiliário";
+            titulo.Click += titulo_Click;
             // 
             // cadastrarButton
             // 
             cadastrarButton.BackColor = SystemColors.ActiveCaption;
             cadastrarButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            cadastrarButton.Location = new Point(219, 309);
+            cadastrarButton.Location = new Point(219, 295);
             cadastrarButton.Margin = new Padding(3, 4, 3, 4);
             cadastrarButton.Name = "cadastrarButton";
-            cadastrarButton.Size = new Size(173, 54);
+            cadastrarButton.Size = new Size(173, 68);
             cadastrarButton.TabIndex = 1;
             cadastrarButton.Text = "cadastre-se";
             cadastrarButton.UseVisualStyleBackColor = false;
@@ -63,10 +64,10 @@
             // 
             loginButton.BackColor = SystemColors.ActiveCaption;
             loginButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            loginButton.Location = new Point(537, 309);
+            loginButton.Location = new Point(522, 295);
             loginButton.Margin = new Padding(3, 4, 3, 4);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(153, 54);
+            loginButton.Size = new Size(200, 68);
             loginButton.TabIndex = 3;
             loginButton.Text = "login";
             loginButton.UseVisualStyleBackColor = false;

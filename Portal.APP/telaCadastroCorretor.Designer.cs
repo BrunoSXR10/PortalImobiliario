@@ -32,16 +32,14 @@
             voltarButton = new Button();
             cadastrarButton = new Button();
             nomeLabel = new Label();
-            naciLabel = new Label();
             senhaLabel = new Label();
             nomeTextBox = new TextBox();
             cpfTextBox = new TextBox();
-            nacionalidadeTextBox = new TextBox();
-            pictureBox1 = new PictureBox();
             senhaTextBox = new TextBox();
             cpfLabel = new Label();
-            dataLabel = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            pictureBox1 = new PictureBox();
+            emailLabel = new Label();
+            emailTextBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -62,7 +60,7 @@
             // 
             cadastrarButton.BackColor = Color.HotPink;
             cadastrarButton.Font = new Font("Consolas", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            cadastrarButton.Location = new Point(394, 477);
+            cadastrarButton.Location = new Point(383, 409);
             cadastrarButton.Margin = new Padding(3, 4, 3, 4);
             cadastrarButton.Name = "cadastrarButton";
             cadastrarButton.Size = new Size(133, 53);
@@ -82,24 +80,12 @@
             nomeLabel.TabIndex = 11;
             nomeLabel.Text = "Nome";
             // 
-            // naciLabel
-            // 
-            naciLabel.AutoSize = true;
-            naciLabel.BackColor = Color.Pink;
-            naciLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
-            naciLabel.Location = new Point(144, 417);
-            naciLabel.Name = "naciLabel";
-            naciLabel.Size = new Size(168, 26);
-            naciLabel.TabIndex = 14;
-            naciLabel.Text = "Nacionalidade";
-            naciLabel.TextAlign = ContentAlignment.TopCenter;
-            // 
             // senhaLabel
             // 
             senhaLabel.AutoSize = true;
             senhaLabel.BackColor = Color.Pink;
             senhaLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
-            senhaLabel.Location = new Point(195, 351);
+            senhaLabel.Location = new Point(207, 348);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new Size(72, 26);
             senhaLabel.TabIndex = 15;
@@ -121,26 +107,9 @@
             cpfTextBox.Size = new Size(194, 27);
             cpfTextBox.TabIndex = 17;
             // 
-            // nacionalidadeTextBox
-            // 
-            nacionalidadeTextBox.Location = new Point(360, 419);
-            nacionalidadeTextBox.Margin = new Padding(3, 4, 3, 4);
-            nacionalidadeTextBox.Name = "nacionalidadeTextBox";
-            nacionalidadeTextBox.Size = new Size(194, 27);
-            nacionalidadeTextBox.TabIndex = 20;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-5, -3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(987, 649);
-            pictureBox1.TabIndex = 21;
-            pictureBox1.TabStop = false;
-            // 
             // senhaTextBox
             // 
-            senhaTextBox.Location = new Point(360, 352);
+            senhaTextBox.Location = new Point(360, 349);
             senhaTextBox.Margin = new Padding(3, 4, 3, 4);
             senhaTextBox.Name = "senhaTextBox";
             senhaTextBox.Size = new Size(194, 27);
@@ -158,25 +127,33 @@
             cpfLabel.TabIndex = 12;
             cpfLabel.Text = "CPF";
             // 
-            // dataLabel
+            // pictureBox1
             // 
-            dataLabel.AutoSize = true;
-            dataLabel.BackColor = Color.Pink;
-            dataLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataLabel.Location = new Point(123, 279);
-            dataLabel.Name = "dataLabel";
-            dataLabel.Size = new Size(228, 26);
-            dataLabel.TabIndex = 22;
-            dataLabel.Text = "Data de nascimento";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-1, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(929, 618);
+            pictureBox1.TabIndex = 21;
+            pictureBox1.TabStop = false;
             // 
-            // dateTimePicker1
+            // emailLabel
             // 
-            dateTimePicker1.Location = new Point(360, 279);
-            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(266, 27);
-            dateTimePicker1.TabIndex = 23;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            emailLabel.AutoSize = true;
+            emailLabel.BackColor = Color.Pink;
+            emailLabel.Font = new Font("Consolas", 12.8F, FontStyle.Regular, GraphicsUnit.Point);
+            emailLabel.Location = new Point(207, 280);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new Size(72, 26);
+            emailLabel.TabIndex = 22;
+            emailLabel.Text = "Email";
+            // 
+            // emailTextBox
+            // 
+            emailTextBox.Location = new Point(360, 285);
+            emailTextBox.Margin = new Padding(3, 4, 3, 4);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(194, 27);
+            emailTextBox.TabIndex = 23;
             // 
             // telaCadastroCorretor
             // 
@@ -185,14 +162,12 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(914, 600);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(dataLabel);
-            Controls.Add(nacionalidadeTextBox);
+            Controls.Add(emailTextBox);
+            Controls.Add(emailLabel);
             Controls.Add(senhaTextBox);
             Controls.Add(cpfTextBox);
             Controls.Add(nomeTextBox);
             Controls.Add(senhaLabel);
-            Controls.Add(naciLabel);
             Controls.Add(cpfLabel);
             Controls.Add(nomeLabel);
             Controls.Add(cadastrarButton);
@@ -207,6 +182,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Corretor";
             FormClosed += Form2_FormClosed;
+            Load += telaCadastroCorretor_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -219,16 +195,13 @@
         private Label nomeLabel;
         private Label emailLabel;
         private Label telefoneLabel;
-        private Label naciLabel;
         private Label senhaLabel;
         private TextBox nomeTextBox;
         private TextBox cpfTextBox;
         private TextBox telefoneTextBox;
-        private TextBox nacionalidadeTextBox;
-        private PictureBox pictureBox1;
         private TextBox senhaTextBox;
         private Label cpfLabel;
-        private Label dataLabel;
-        private DateTimePicker dateTimePicker1;
+        private PictureBox pictureBox1;
+        private TextBox emailTextBox;
     }
 }

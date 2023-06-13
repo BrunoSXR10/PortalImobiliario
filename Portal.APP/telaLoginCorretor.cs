@@ -33,30 +33,26 @@ namespace Portal.APP
         private async void loginButton_Click(object sender, EventArgs e)
         {
 
-            string apiUrl = "http://localhost:5205/api";
-            int cpf = int.Parse(loginTextBox.Text);
+            string apiUrl = "http://localhost:5205/api/Corretor";
+            string cpf = loginTextBox.Text;
             string senha = senhaTextBox.Text;
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync($"{apiUrl}/Corretor?x={cpf}");
-                HttpResponseMessage response2 = await client.GetAsync($"{apiUrl}/Corretor?x={senha}");
+                HttpResponseMessage response = await client.GetAsync($"{apiUrl}/{cpf}");
                 try
                 {
-                    if (response.IsSuccessStatusCode && response2.IsSuccessStatusCode)
-                    {
-                        string apiResponse = await response.Content.ReadAsStringAsync();
-                        var usuarioEncontrado = JsonConvert.DeserializeObject<TbCorretor>(apiResponse);
-                        int id = usuarioEncontrado.IdCorretor;
-                        getIdLogin = id;
-                        telaGerenciamento form5 = new telaGerenciamento();
-                        form5.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Não foi possivel logar, Login ou senha errados!" + response.StatusCode);
-                    }
+                    if (response.IsSuccessStatusCode)
+                     {
+                         string apiResponse = await response.Content.ReadAsStringAsync();
+                         telaGerenciamento form5 = new telaGerenciamento();
+                         form5.Show();
+                         this.Hide();
+                     }
+                     else
+                     {
+                         MessageBox.Show("Não foi possivel logar, Login ou senha errados! " + response.StatusCode);
+                     }
                 }
                 catch
                 {

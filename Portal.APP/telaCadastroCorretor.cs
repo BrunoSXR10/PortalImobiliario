@@ -35,12 +35,11 @@ namespace Portal.APP
 
         private async void cadastrarButton_Click(object sender, EventArgs e)
         {
-            TbCorretor c = new TbCorretor();
+            Usuario c = new Usuario();
             c.Nome = nomeTextBox.Text;
             c.Senha = senhaTextBox.Text;
-            c.DtNascimento = dateTimePicker1.Value.Date;
-            c.Cpf = int.Parse(cpfTextBox.Text);
-            c.Deputado = nacionalidadeTextBox.Text;
+            c.Cpf = cpfTextBox.Text;
+            c.Deputado = emailTextBox.Text;
             string objetoJson = JsonConvert.SerializeObject(c);
             using (HttpClient client = new HttpClient())
             {
@@ -80,7 +79,7 @@ namespace Portal.APP
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void telaCadastroCorretor_Load(object sender, EventArgs e)
         {
 
         }

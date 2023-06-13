@@ -35,14 +35,8 @@
             descricaoTextBox = new TextBox();
             valorTextBox = new TextBox();
             cadastrarButton = new Button();
-            cepTextBox = new TextBox();
-            cepLabel = new Label();
-            logradouroLabel = new Label();
-            numeroLabel = new Label();
-            complementoLabel = new Label();
-            complementoTextBox = new TextBox();
-            logradouroTextBox = new TextBox();
-            numeroTextBox = new TextBox();
+            localizacaoLabel = new Label();
+            localizacaoTextBox = new TextBox();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -64,9 +58,9 @@
             // 
             descricaoLabel.BackColor = SystemColors.ActiveCaption;
             descricaoLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            descricaoLabel.Location = new Point(163, 56);
+            descricaoLabel.Location = new Point(165, 65);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new Size(136, 36);
+            descricaoLabel.Size = new Size(129, 36);
             descricaoLabel.TabIndex = 1;
             descricaoLabel.Text = "descrição";
             descricaoLabel.Click += descricaoLabel_Click;
@@ -75,7 +69,7 @@
             // 
             valorLabel.BackColor = SystemColors.ActiveCaption;
             valorLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            valorLabel.Location = new Point(189, 381);
+            valorLabel.Location = new Point(189, 284);
             valorLabel.Name = "valorLabel";
             valorLabel.Size = new Size(80, 31);
             valorLabel.TabIndex = 3;
@@ -83,16 +77,16 @@
             // 
             // descricaoTextBox
             // 
-            descricaoTextBox.Location = new Point(328, 13);
+            descricaoTextBox.Location = new Point(324, 46);
             descricaoTextBox.Margin = new Padding(3, 4, 3, 4);
             descricaoTextBox.Multiline = true;
             descricaoTextBox.Name = "descricaoTextBox";
-            descricaoTextBox.Size = new Size(322, 117);
+            descricaoTextBox.Size = new Size(322, 75);
             descricaoTextBox.TabIndex = 4;
             // 
             // valorTextBox
             // 
-            valorTextBox.Location = new Point(328, 381);
+            valorTextBox.Location = new Point(324, 284);
             valorTextBox.Margin = new Padding(3, 4, 3, 4);
             valorTextBox.Name = "valorTextBox";
             valorTextBox.Size = new Size(322, 27);
@@ -102,7 +96,7 @@
             // 
             cadastrarButton.BackColor = SystemColors.ActiveCaption;
             cadastrarButton.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            cadastrarButton.Location = new Point(370, 453);
+            cadastrarButton.Location = new Point(367, 467);
             cadastrarButton.Margin = new Padding(3, 4, 3, 4);
             cadastrarButton.Name = "cadastrarButton";
             cadastrarButton.Size = new Size(219, 65);
@@ -111,81 +105,25 @@
             cadastrarButton.UseVisualStyleBackColor = false;
             cadastrarButton.Click += cadastrarButton_Click;
             // 
-            // cepTextBox
+            // localizacaoLabel
             // 
-            cepTextBox.Location = new Point(328, 152);
-            cepTextBox.Margin = new Padding(3, 4, 3, 4);
-            cepTextBox.Name = "cepTextBox";
-            cepTextBox.Size = new Size(322, 27);
-            cepTextBox.TabIndex = 8;
+            localizacaoLabel.AutoSize = true;
+            localizacaoLabel.BackColor = SystemColors.ActiveCaption;
+            localizacaoLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            localizacaoLabel.Location = new Point(153, 176);
+            localizacaoLabel.Name = "localizacaoLabel";
+            localizacaoLabel.Size = new Size(155, 28);
+            localizacaoLabel.TabIndex = 12;
+            localizacaoLabel.Text = "Localização";
             // 
-            // cepLabel
+            // localizacaoTextBox
             // 
-            cepLabel.AutoSize = true;
-            cepLabel.BackColor = SystemColors.ActiveCaption;
-            cepLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cepLabel.Location = new Point(195, 152);
-            cepLabel.Name = "cepLabel";
-            cepLabel.Size = new Size(51, 28);
-            cepLabel.TabIndex = 9;
-            cepLabel.Text = "cep";
-            // 
-            // logradouroLabel
-            // 
-            logradouroLabel.AutoSize = true;
-            logradouroLabel.BackColor = SystemColors.ActiveCaption;
-            logradouroLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            logradouroLabel.Location = new Point(157, 209);
-            logradouroLabel.Name = "logradouroLabel";
-            logradouroLabel.Size = new Size(142, 28);
-            logradouroLabel.TabIndex = 10;
-            logradouroLabel.Text = "logradouro";
-            // 
-            // numeroLabel
-            // 
-            numeroLabel.AutoSize = true;
-            numeroLabel.BackColor = SystemColors.ActiveCaption;
-            numeroLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            numeroLabel.Location = new Point(179, 260);
-            numeroLabel.Name = "numeroLabel";
-            numeroLabel.Size = new Size(90, 28);
-            numeroLabel.TabIndex = 11;
-            numeroLabel.Text = "número";
-            // 
-            // complementoLabel
-            // 
-            complementoLabel.AutoSize = true;
-            complementoLabel.BackColor = SystemColors.ActiveCaption;
-            complementoLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            complementoLabel.Location = new Point(157, 319);
-            complementoLabel.Name = "complementoLabel";
-            complementoLabel.Size = new Size(155, 28);
-            complementoLabel.TabIndex = 12;
-            complementoLabel.Text = "complemento";
-            // 
-            // complementoTextBox
-            // 
-            complementoTextBox.Location = new Point(328, 319);
-            complementoTextBox.Margin = new Padding(3, 4, 3, 4);
-            complementoTextBox.Name = "complementoTextBox";
-            complementoTextBox.Size = new Size(322, 27);
-            complementoTextBox.TabIndex = 13;
-            // 
-            // logradouroTextBox
-            // 
-            logradouroTextBox.Location = new Point(328, 212);
-            logradouroTextBox.Margin = new Padding(3, 4, 3, 4);
-            logradouroTextBox.Name = "logradouroTextBox";
-            logradouroTextBox.Size = new Size(322, 27);
-            logradouroTextBox.TabIndex = 13;
-            // 
-            // numeroTextBox
-            // 
-            numeroTextBox.Location = new Point(328, 263);
-            numeroTextBox.Margin = new Padding(3, 4, 3, 4);
-            numeroTextBox.Name = "numeroTextBox";
-            numeroTextBox.Size = new Size(322, 27);
-            numeroTextBox.TabIndex = 14;
+            localizacaoTextBox.Location = new Point(324, 175);
+            localizacaoTextBox.Margin = new Padding(3, 4, 3, 4);
+            localizacaoTextBox.Multiline = true;
+            localizacaoTextBox.Name = "localizacaoTextBox";
+            localizacaoTextBox.Size = new Size(322, 29);
+            localizacaoTextBox.TabIndex = 13;
             // 
             // pictureBox1
             // 
@@ -203,14 +141,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
-            Controls.Add(numeroTextBox);
-            Controls.Add(logradouroTextBox);
-            Controls.Add(complementoTextBox);
-            Controls.Add(complementoLabel);
-            Controls.Add(numeroLabel);
-            Controls.Add(logradouroLabel);
-            Controls.Add(cepLabel);
-            Controls.Add(cepTextBox);
+            Controls.Add(localizacaoTextBox);
+            Controls.Add(localizacaoLabel);
             Controls.Add(cadastrarButton);
             Controls.Add(valorTextBox);
             Controls.Add(descricaoTextBox);
@@ -243,10 +175,10 @@
         private Label cepLabel;
         private Label logradouroLabel;
         private Label numeroLabel;
-        private Label complementoLabel;
-        private TextBox complementoTextBox;
+        private Label localizacaoLabel;
+        private TextBox localizacaoTextBox;
+        private PictureBox pictureBox1;
         private TextBox logradouroTextBox;
         private TextBox numeroTextBox;
-        private PictureBox pictureBox1;
     }
 }
