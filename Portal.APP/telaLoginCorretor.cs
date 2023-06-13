@@ -34,7 +34,7 @@ namespace Portal.APP
         {
 
             string apiUrl = "http://localhost:5205/api";
-            int cpf = int.Parse(loginTextBox.Text);
+            string cpf = loginTextBox.Text;
             string senha = senhaTextBox.Text;
 
             using (HttpClient client = new HttpClient())
@@ -46,9 +46,7 @@ namespace Portal.APP
                     if (response.IsSuccessStatusCode && response2.IsSuccessStatusCode)
                     {
                         string apiResponse = await response.Content.ReadAsStringAsync();
-                        var usuarioEncontrado = JsonConvert.DeserializeObject<TbCorretor>(apiResponse);
-                        int id = usuarioEncontrado.IdCorretor;
-                        getIdLogin = id;
+                        var usuarioEncontrado = JsonConvert.DeserializeObject<Usuario>(apiResponse);
                         telaGerenciamento form5 = new telaGerenciamento();
                         form5.Show();
                         this.Hide();

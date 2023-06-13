@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Portal.DAL.DBContext;
+namespace Portal.MODEL;
 
 public partial class Usuario
 {
