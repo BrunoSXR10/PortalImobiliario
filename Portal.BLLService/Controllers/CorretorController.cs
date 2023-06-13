@@ -12,11 +12,11 @@ namespace Portal.BLLService.Controllers
 
         [HttpGet("{Id}", Name = "GetCorretorByID")]
 
-        public ActionResult<TbCorretor> GetCorretorByID(int Id)
+        public ActionResult<Usuario> GetCorretorByID(int Id)
         {
             try
             {
-                TbCorretor _corretor = CorretorRepository.GetByID(Id);
+                Usuario _corretor = CorretorRepository.GetByID(Id);
                 if (_corretor != null)
                 {
                     return Ok(_corretor);
@@ -30,13 +30,13 @@ namespace Portal.BLLService.Controllers
         }
 
         [HttpPost(Name = "AddCorretor")]
-        public IActionResult AddCorretor([FromBody] TbCorretor corretor) //ActionResult<Imovel>
+        public IActionResult AddCorretor([FromBody] Usuario corretor) //ActionResult<Imovel>
         {
             try
             {
                 CorretorRepository.Add(corretor);
                 return CreatedAtAction(nameof(GetCorretorByID),
-                    new { id = corretor.IdCorretor },
+                    new { id = corretor.Id },
                     corretor);
             }
             catch (Exception ex)
