@@ -40,9 +40,10 @@ namespace Portal.APP
             using (HttpClient client = new HttpClient())
             {
                 HttpResponseMessage response = await client.GetAsync($"{apiUrl}/{cpf}");
+                HttpResponseMessage response2 = await client.GetAsync($"{apiUrl}/{senha}");
                 try
                 {
-                    if (response.IsSuccessStatusCode)
+                    if (response.IsSuccessStatusCode && response2.IsSuccessStatusCode)
                      {
                          string apiResponse = await response.Content.ReadAsStringAsync();
                          telaGerenciamento form5 = new telaGerenciamento();
