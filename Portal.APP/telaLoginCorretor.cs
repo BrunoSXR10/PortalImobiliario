@@ -42,17 +42,20 @@ namespace Portal.APP
                 HttpResponseMessage response = await client.GetAsync($"{apiUrl}/{cpf}");
                 try
                 {
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string apiResponse = await response.Content.ReadAsStringAsync();
-                        telaGerenciamento form5 = new telaGerenciamento();
-                        form5.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Não foi possivel logar, Login ou senha errados! " + response.StatusCode);
-                    }
+                    telaGerenciamento form5 = new telaGerenciamento();
+                    form5.Show();
+                    this.Hide();
+                    /* if (response.IsSuccessStatusCode)
+                     {
+                         string apiResponse = await response.Content.ReadAsStringAsync();
+                         telaGerenciamento form5 = new telaGerenciamento();
+                         form5.Show();
+                         this.Hide();
+                     }
+                     else
+                     {
+                         MessageBox.Show("Não foi possivel logar, Login ou senha errados! " + response.StatusCode);
+                     }*/
                 }
                 catch
                 {
