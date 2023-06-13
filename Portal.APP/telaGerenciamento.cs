@@ -39,7 +39,7 @@ namespace Portal.APP
             {
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync($"{url}/GetImovelByID");
+                    HttpResponseMessage response = await client.GetAsync($"{url}/GetImovel");
                     if (response.IsSuccessStatusCode)
                     {
                         List<Imv> listaObjetos = await response.Content.ReadAsAsync<List<Imv>>();
